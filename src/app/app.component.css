@@ -1,0 +1,54 @@
+.p-menubar {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  background: none;
+  border: none;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.scrolled .p-menubar{
+  border-bottom: 1px solid #d6d6d6;
+  border-radius: 0;
+}
+
+.p-component {
+  font-family: 'Play', sans-serif;
+  font-weight: bold;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+  font-size: 1.1rem;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover {
+  background: none;
+  border-bottom: 2px solid #689F38;
+  border-radius: 0;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover > .p-menuitem-text {
+  color: #689F38;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:focus, .p-menubar .p-menuitem-link:focus {
+  background: none;
+  border-bottom: 2px solid #689F38;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:focus > .p-menuitem-text,
+.p-menubar .p-menuitem-link:focus > .p-menuitem-text {
+    color: #689F38;
+}
+
+body {
+  min-height: 3000px;
+}

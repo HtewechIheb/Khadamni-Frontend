@@ -1,1 +1,8 @@
-<p-menubar [model]="items"></p-menubar>
+<p-menubar [model]="items" [ngClass]="{ 'scrolled': scrolled }">
+  <ng-template pTemplate="start">
+      <img src="https://www.primefaces.org/primeng/showcase/assets/showcase/images/primeng-logo-dark.svg" class="brand">
+  </ng-template>
+  <ng-template pTemplate="end">
+      <button pButton type="button" label="Login" class="p-button-success p-button-rounded login-button"></button>
+  </ng-template>
+</p-menubar>

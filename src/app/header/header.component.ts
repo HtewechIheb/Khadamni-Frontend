@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -8,13 +8,28 @@ import { MenuItem } from 'primeng/api';
 })
 export class HeaderComponent implements OnInit {
   public items: MenuItem[];
+  public scrolled: boolean = false;
+
+  @HostListener('window:scroll', ['$event']) onPageScroll(event){
+    this.scrolled = window.pageYOffset >= 50;
+  }
 
   constructor() { }
 
   ngOnInit(): void {
     this.items = [
-      { label: '<img src="https://www.primefaces.org/primeng/showcase/assets/showcase/images/primeng.svg"/>', escape: false},
-    ]
+      {
+        label: 'Job Offers',
+      },
+      {
+        label: 'Companies',
+      },
+      {
+        label: 'Contact Us',
+      },
+      {
+        label: 'About Us'
+      }
+    ];
   }
-
 }
