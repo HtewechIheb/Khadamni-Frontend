@@ -1,4 +1,5 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { faBell, faEnvelope, faUser, faUserTie } from '@fortawesome/free-solid-svg-icons';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -9,27 +10,13 @@ import { MenuItem } from 'primeng/api';
 export class HeaderComponent implements OnInit {
   public items: MenuItem[];
   public scrolled: boolean = false;
-
-  @HostListener('window:scroll', ['$event']) onPageScroll(event){
-    this.scrolled = window.pageYOffset >= 50;
-  }
+  faUserTie = faUserTie;
+  faBell = faBell;
+  faEnvelope = faEnvelope;
+  faUser = faUser;
 
   constructor() { }
 
   ngOnInit(): void {
-    this.items = [
-      {
-        label: 'Job Offers',
-      },
-      {
-        label: 'Companies',
-      },
-      {
-        label: 'Contact Us',
-      },
-      {
-        label: 'About Us'
-      }
-    ];
   }
 }

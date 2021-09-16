@@ -1,1 +1,61 @@
 <app-header></app-header>
+<div class="grid main-content">
+  <div class="col-12">
+    <div class="grid section">
+      <div class="col-12 md:col-5 md:col-offset-1">
+        <p-card>
+          <div class="grid">
+            <div class="col-8">
+              <div class="p-card-title">Upload Resume</div>
+              <div class="p-card-subtitle">Upload Your Resume So Recruiters Can Find You Easily!</div>
+            </div>
+            <div class="col-4">
+              <div class="card-image">
+                <img src="../assets/images/resume.png" style="height: 5rem;">
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+
+      <div class="col-12 md:col-5">
+        <p-card>
+          <div class="grid">
+            <div class="col-8">
+              <div class="p-card-title">Post Job Offer</div>
+              <div class="p-card-subtitle">Post Your Job Offer So Job Seekers Can Apply Easily!</div>
+            </div>
+            <div class="col-4">
+              <div class="card-image">
+                <img src="../assets/images/offer.png" style="height: 5rem;">
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+    </div>
+
+    <div class="grid section">
+      <span class="section-header">Trending Companies</span>
+      <p-carousel [value]="companies" [numScroll]="1" [numVisible]="3" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+        <ng-template let-company pTemplate="item">
+          <div class="company-item">
+            <div class="company-item-content">
+              <div class="p-mb-3">
+                <img style="width: 35px;" src="../assets/images/resume.png" [alt]="company" class="product-image" />
+              </div>
+              <div>
+                <h4 class="p-mb-1">Company</h4>
+                <div class="car-buttons p-mt-5">
+                  <p-button type="button" styleClass="p-button p-button-rounded p-mr-2" icon="pi pi-search"></p-button>
+                  <p-button type="button" styleClass="p-button-success p-button-rounded p-mr-2" icon="pi pi-star"></p-button>
+                  <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+  </div>
+</div>
