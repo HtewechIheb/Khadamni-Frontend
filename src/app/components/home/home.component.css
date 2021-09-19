@@ -1,0 +1,30 @@
+.section {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.section-header {
+  width: 100%;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+p-carousel ::ng-deep .companies-carousel .p-carousel-indicators {
+  padding-bottom: 0;
+}
+
+p-paginator ::ng-deep .p-paginator-page-options {
+  display: none;
+}
+
+@media screen and (max-width: 576px){
+  p-paginator ::ng-deep .p-paginator-page-options {
+    display: inline-flex;
+  }
+
+  p-paginator ::ng-deep .p-paginator-pages {
+    display: none;
+  }
+}

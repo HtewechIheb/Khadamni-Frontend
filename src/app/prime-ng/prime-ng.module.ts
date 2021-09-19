@@ -3,8 +3,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenubarModule } from 'primeng/menubar';
 import { SharedModule } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
-import {CardModule} from 'primeng/card';
+import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
+import { PaginatorModule } from 'primeng/paginator';
 
 @NgModule({
   imports: [
@@ -13,7 +14,8 @@ import { CarouselModule } from 'primeng/carousel';
     SharedModule,
     ButtonModule,
     CardModule,
-    CarouselModule
+    CarouselModule,
+    PaginatorModule,
   ],
   exports: [
     BrowserAnimationsModule,
@@ -21,7 +23,8 @@ import { CarouselModule } from 'primeng/carousel';
     SharedModule,
     ButtonModule,
     CardModule,
-    CarouselModule
+    CarouselModule,
+    PaginatorModule
   ],
 })
 export class PrimeNGModule {}

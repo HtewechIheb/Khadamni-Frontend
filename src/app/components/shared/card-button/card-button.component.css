@@ -1,0 +1,8 @@
+p-card ::ng-deep .card-button {
+  height: 100%;
+}
+
+.card-image {
+  display: flex;
+  justify-content: flex-end;
+}

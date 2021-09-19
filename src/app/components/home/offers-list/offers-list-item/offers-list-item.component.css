@@ -1,0 +1,48 @@
+p-card ::ng-deep .offers-list-item {
+  margin-bottom: 1rem;
+}
+
+p-card ::ng-deep .offers-list-item .apply-button {
+  background-color: #3A6EA5;
+  border-color: #3A6EA5;
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+  box-shadow: none;
+}
+
+p-card ::ng-deep .offers-list-item .details-button {
+  background-color: #FF6700;
+  border-color: #FF6700;
+  margin-right: 0.2rem;
+  margin-left: 0.2rem;
+  box-shadow: none;
+}
+
+p-card ::ng-deep .offers-list-item .apply-button:enabled:active {
+    background: #3A6EA5;
+    border-color: #3A6EA5;
+}
+
+p-card ::ng-deep .offers-list-item .details-button:enabled:active {
+    background: #FF6700;
+    border-color: #FF6700;
+}
+
+p-card ::ng-deep .offers-list-item .apply-button:enabled:hover {
+    background: #3A6EA5;
+    border-color: #3A6EA5;
+}
+
+p-card ::ng-deep .offers-list-item .details-button:enabled:hover {
+    background: #FF6700;
+    border-color: #FF6700;
+}
+
+p-card ::ng-deep .offers-list-item .p-button-label {
+  color: #FFFFFF;
+}
+
+p-card ::ng-deep .offers-list-item .p-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}

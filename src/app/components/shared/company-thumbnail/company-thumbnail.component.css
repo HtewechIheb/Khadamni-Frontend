@@ -1,0 +1,23 @@
+.company-item .company-item-content {
+    background-color: #FFFFFF;
+    border: 1px solid #DFDFDF;
+    border-radius: 3px;
+    margin: .3rem;
+    padding: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+}
+
+.company-item-content .company-item-image {
+    width: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+}
+
+.company-item-content .company-item-title {
+  margin: 0.2rem 0;
+}
+
+.company-item-content .company-item-subtitle {
+  color: #FF6700  ;
+  font-size: smaller;
+}
