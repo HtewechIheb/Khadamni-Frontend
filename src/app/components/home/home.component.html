@@ -13,7 +13,7 @@
     </div>
 
     <div class="section">
-      <div class="section-header">Trending Companies</div>
+      <h1 class="section-header">Trending Companies</h1>
       <p-carousel [styleClass]="'companies-carousel'" [value]="companies" [numScroll]="1" [numVisible]="6"
         [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
         <ng-template let-company pTemplate="item">
@@ -24,7 +24,7 @@
 
     <div class="grid section">
       <div class="col-12 md:col-10 md:col-offset-1">
-        <div class="section-header">Recent Offers</div>
+        <h1 class="section-header">Recent Offers</h1>
         <app-offers-list [items]="[]"></app-offers-list>
         <p-paginator [rows]="10" [totalRecords]="100" [showPageLinks]="true" [showJumpToPageDropdown]="true"></p-paginator>
       </div>
