@@ -6,6 +6,7 @@ import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
 import { PaginatorModule } from 'primeng/paginator';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
   imports: [
@@ -16,6 +17,7 @@ import { PaginatorModule } from 'primeng/paginator';
     CardModule,
     CarouselModule,
     PaginatorModule,
+    InputTextModule,
   ],
   exports: [
     BrowserAnimationsModule,
@@ -24,7 +26,8 @@ import { PaginatorModule } from 'primeng/paginator';
     ButtonModule,
     CardModule,
     CarouselModule,
-    PaginatorModule
+    PaginatorModule,
+    InputTextModule,
   ],
 })
 export class PrimeNGModule {}

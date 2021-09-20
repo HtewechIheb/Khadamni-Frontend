@@ -12,6 +12,10 @@ import { CompanyThumbnailComponent } from './components/shared/company-thumbnail
 import { OfferItemComponent } from './components/home/offers-list/offers-list-item/offers-list-item.component';
 import { OffersListComponent } from './components/home/offers-list/offers-list.component';
 import { HomeComponent } from './components/home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { RegisterCandidateComponent } from './register/register-candidate/register-candidate.component';
+import { RegisterCompanyComponent } from './register/register-company/register-company.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,12 +26,16 @@ import { HomeComponent } from './components/home/home.component';
     CompanyThumbnailComponent,
     OfferItemComponent,
     OffersListComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterComponent,
+    RegisterCandidateComponent,
+    RegisterCompanyComponent
   ],
   imports: [
     BrowserModule,
     PrimeNGModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    FormsModule
     //AppRoutingModule,
   ],
   providers: [],
