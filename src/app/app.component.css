@@ -7,6 +7,10 @@ body {
   background-color: #FAFAFA;
 }
 
+a {
+  color: #2196F3;
+}
+
 .p-card {
   border: 1px solid rgb(0 0 0 / 14%);
   cursor: pointer;

@@ -7,6 +7,8 @@ import { CardModule } from 'primeng/card';
 import { CarouselModule } from 'primeng/carousel';
 import { PaginatorModule } from 'primeng/paginator';
 import { InputTextModule } from 'primeng/inputtext';
+import { CheckboxModule } from 'primeng/checkbox';
+import { RadioButtonModule } from 'primeng/radiobutton';
 
 @NgModule({
   imports: [
@@ -18,6 +20,8 @@ import { InputTextModule } from 'primeng/inputtext';
     CarouselModule,
     PaginatorModule,
     InputTextModule,
+    CheckboxModule,
+    RadioButtonModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -28,6 +32,8 @@ import { InputTextModule } from 'primeng/inputtext';
     CarouselModule,
     PaginatorModule,
     InputTextModule,
+    CheckboxModule,
+    RadioButtonModule
   ],
 })
 export class PrimeNGModule {}

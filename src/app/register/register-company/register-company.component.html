@@ -1,1 +1,110 @@
-<p>register-company works!</p>
+<h1 class="header">Register Company</h1>
+<form class="form" #form="ngForm">
+  <div class="grid">
+    <div class="col-6">
+      <div class="entry">
+        <span class="p-float-label">
+          <input id="name" type="text" pInputText />
+          <label for="name">
+            <fa-icon [icon]="faBuilding" class="button-icon"></fa-icon>Company Name
+          </label>
+        </span>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="entry">
+        <span class="p-float-label">
+          <input id="category" type="text" pInputText />
+          <label for="category">
+            <fa-icon [icon]="faTag" class="button-icon"></fa-icon>Category
+          </label>
+        </span>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="entry">
+        <span class="p-float-label">
+          <input id="email" type="email" pInputText />
+          <label for="email">
+            <fa-icon [icon]="faAt" class="button-icon"></fa-icon>Email
+          </label>
+        </span>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="entry">
+        <span class="p-float-label">
+          <input id="contact-number" type="text" pInputText />
+          <label for="contact-number">
+            <fa-icon [icon]="faPhoneAlt" class="button-icon"></fa-icon>Contact Number
+          </label>
+        </span>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="entry">
+        <span class="p-float-label">
+          <input id="password" type="password" pInputText />
+          <label for="password">
+            <fa-icon [icon]="faLock" class="button-icon"></fa-icon>Password
+          </label>
+        </span>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="entry">
+        <span class="p-float-label">
+          <input id="password" type="password" pInputText />
+          <label for="password">
+            <fa-icon [icon]="faLock" class="button-icon"></fa-icon>Confirm Password
+          </label>
+        </span>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="entry">
+        <span class="p-float-label">
+          <input id="address" type="password" pInputText />
+          <label for="address">
+            <fa-icon [icon]="faMapMarkedAlt" class="button-icon"></fa-icon>Address
+          </label>
+        </span>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="entry">
+        <span class="p-float-label">
+          <textarea id="address" rows="10" pInputTextarea></textarea>
+          <label for="address">
+            <fa-icon [icon]="faInfoCircle" class="button-icon"></fa-icon>Description
+          </label>
+        </span>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="entry">
+        <div class="upload-button-wrapper">
+          <button pButton type="button" label=" " class="p-button upload-button"><span style="width: 100%;">
+              <fa-icon [icon]="faUpload" class="button-icon"></fa-icon>Upload Logo
+            </span></button>
+          <input type="file" class="upload-element" />
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="entry">
+        <p-checkbox [(ngModel)]="tos" [binary]="true"></p-checkbox>
+        <span>I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy
+            Policy</a></span>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="entry">
+        <button pButton type="button" label=" " class="p-button p-button-primary submit-button"><span
+            style="width: 100%;">
+            Register
+          </span></button>
+      </div>
+    </div>
+  </div>
+</form>
