@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faInfoCircle, faTag, faVenusMars, faIdCardAlt, faFileInvoice } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faInfoCircle, faTag, faVenusMars, faIdCardAlt, faFileInvoice, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-register-candidate',
@@ -18,6 +18,7 @@ export class RegisterCandidateComponent implements OnInit {
   faVenusMars = faVenusMars;
   faIdCardAlt = faIdCardAlt;
   faFileInvoice = faFileInvoice;
+  faCalendarAlt = faCalendarAlt;
 
   tos: boolean = false;
   gender: string;

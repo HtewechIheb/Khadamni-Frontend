@@ -16,6 +16,7 @@ import { RegisterComponent } from './register/register.component';
 import { RegisterCandidateComponent } from './register/register-candidate/register-candidate.component';
 import { RegisterCompanyComponent } from './register/register-company/register-company.component';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { FormsModule } from '@angular/forms';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     PrimeNGModule,
     FontAwesomeModule,
     FormsModule

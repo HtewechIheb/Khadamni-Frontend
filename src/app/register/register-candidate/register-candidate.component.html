@@ -1,7 +1,7 @@
 <h1 class="header">Register Candidate</h1>
 <form class="form" #form="ngForm">
   <div class="grid">
-    <div class="col-6">
+    <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
           <input id="name" type="text" pInputText />
@@ -11,7 +11,7 @@
         </span>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
           <input id="category" type="text" pInputText />
@@ -21,7 +21,7 @@
         </span>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
           <input id="email" type="email" pInputText />
@@ -31,7 +31,7 @@
         </span>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
           <input id="contact-number" type="text" pInputText />
@@ -41,7 +41,7 @@
         </span>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
           <input id="password" type="password" pInputText />
@@ -51,7 +51,7 @@
         </span>
       </div>
     </div>
-    <div class="col-6">
+    <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
           <input id="password" type="password" pInputText />
@@ -61,7 +61,7 @@
         </span>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-12 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
           <input id="address" type="password" pInputText />
@@ -71,7 +71,17 @@
         </span>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-12 md:col-6 flex-align-end">
+      <div class="entry">
+        <span class="p-float-label">
+          <p-calendar [inputId]="'birthdate'"></p-calendar>
+          <label for="birthdate">
+            <fa-icon [icon]="faCalendarAlt" class="button-icon"></fa-icon>Birthdate
+          </label>
+        </span>
+      </div>
+    </div>
+    <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="radio-label">
           <fa-icon [icon]="faVenusMars" class="button-icon"></fa-icon>Gender:
@@ -80,7 +90,7 @@
         <p-radioButton name="gender" label="Female" value="female" [(ngModel)]="gender"></p-radioButton>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-12 flex-align-end">
       <div class="entry">
         <div class="upload-button-wrapper">
           <button pButton type="button" label=" " class="p-button upload-button"><span style="width: 100%;">
@@ -96,14 +106,14 @@
         </div>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-12 flex-align-end">
       <div class="entry">
         <p-checkbox [(ngModel)]="tos" [binary]="true"></p-checkbox>
         <span>I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy
             Policy</a></span>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-12 flex-align-end">
       <div class="entry">
         <button pButton type="button" label=" " class="p-button p-button-primary submit-button"><span
             style="width: 100%;">

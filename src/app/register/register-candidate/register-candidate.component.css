@@ -2,6 +2,15 @@
   padding-top: 2rem;
 }
 
+.header {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.flex-align-end {
+  align-self: flex-end;
+}
+
 .entry {
   padding-right: 1rem;
   padding-left: 1rem;
@@ -11,7 +20,8 @@
 }
 
 .entry button,
-.entry input {
+.entry input,
+.entry p-calendar ::ng-deep .p-calendar {
   width: 100%;
 }
 
@@ -25,9 +35,23 @@
   margin-left: 0.5rem;
 }
 
+@media screen and (max-width: 992px){
+  .entry p-radioButton {
+    margin-top: 0.3rem;
+    width: 100%;
+  }
+}
+
 .entry p-radioButton ::ng-deep label {
   margin-left: 0.2rem;
   color: #6c757d;
+}
+
+.entry p-calendar ::ng-deep .p-inputtext {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
 }
 
 .entry .p-inputtext {
