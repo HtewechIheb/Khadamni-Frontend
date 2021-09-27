@@ -93,15 +93,19 @@
     <div class="col-12 flex-align-end">
       <div class="entry">
         <div class="upload-button-wrapper">
-          <button pButton type="button" label=" " class="p-button upload-button"><span style="width: 100%;">
+          <button pButton type="button" label=" " class="p-button upload-button">
+            <span style="width: 100%;">
               <fa-icon [icon]="faIdCardAlt" class="button-icon"></fa-icon>Upload Photo
-            </span></button>
+            </span>
+          </button>
           <input type="file" class="upload-element" />
         </div>
         <div class="upload-button-wrapper">
-          <button pButton type="button" label=" " class="p-button upload-button"><span style="width: 100%;">
+          <button pButton type="button" label=" " class="p-button upload-button">
+            <span style="width: 100%;">
               <fa-icon [icon]="faFileInvoice" class="button-icon"></fa-icon>Upload Resume
-            </span></button>
+            </span>
+          </button>
           <input type="file" class="upload-element" />
         </div>
       </div>
@@ -109,16 +113,14 @@
     <div class="col-12 flex-align-end">
       <div class="entry">
         <p-checkbox [(ngModel)]="tos" [binary]="true"></p-checkbox>
-        <span>I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy
-            Policy</a></span>
+        <span>I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
       </div>
     </div>
     <div class="col-12 flex-align-end">
       <div class="entry">
-        <button pButton type="button" label=" " class="p-button p-button-primary submit-button"><span
-            style="width: 100%;">
-            Register
-          </span></button>
+        <button pButton type="button" label=" " class="p-button p-button-primary submit-button">
+          <span style="width: 100%;">Register</span>
+        </button>
       </div>
     </div>
   </div>

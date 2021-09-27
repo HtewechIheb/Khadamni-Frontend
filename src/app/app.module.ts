@@ -17,6 +17,7 @@ import { RegisterCandidateComponent } from './register/register-candidate/regist
 import { RegisterCompanyComponent } from './register/register-company/register-company.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddOfferComponent } from './add-offer/add-offer.component';
 
 @NgModule({
   declarations: [
@@ -30,15 +31,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     RegisterComponent,
     RegisterCandidateComponent,
-    RegisterCompanyComponent
+    RegisterCompanyComponent,
+    AddOfferComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     PrimeNGModule,
     FontAwesomeModule,
-    FormsModule
-    //AppRoutingModule,
+    FormsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
