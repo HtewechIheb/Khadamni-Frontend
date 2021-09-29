@@ -1,0 +1,124 @@
+.form-container {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(0 0 0 / 14%);
+  text-align: center;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+.form {
+  padding-top: 2rem;
+}
+
+.header {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  font-weight: 500;
+}
+
+.header .step-title {
+  font-weight: 300;
+}
+
+.entry {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.entry .p-inputtext, .entry .p-inputtextarea {
+  width: 100%;
+}
+
+.entry .p-inputtext,
+.entry .p-inputtextarea {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.entry .p-inputtext:enabled:focus,
+.entry .p-inputtextarea:focus {
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+  outline: none;
+}
+
+.entry .p-inputtext:enabled:hover,
+.entry .p-inputtextarea:hover {
+  border-color: #757575;
+}
+
+.entry .p-inputtextarea {
+  resize: none;
+}
+
+@media screen and (max-width: 992px) {
+  .entry .p-float-label > label {
+    font-size: small;
+  }
+}
+
+.entry p-inputnumber ::ng-deep .p-inputtext,
+.entry p-dropdown ::ng-deep .p-dropdown {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.entry p-inputnumber ::ng-deep .p-inputtext:enabled:focus,
+.entry p-dropdown ::ng-deep .p-dropdown:enabled:focus {
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.entry p-inputnumber ::ng-deep .p-inputtext:enabled:hover,
+.entry p-dropdown ::ng-deep .p-dropdown:enabled:hover {
+  border-color: #757575;
+}
+
+.entry p-inputnumber ::ng-deep .p-inputnumber,
+.entry p-dropdown ::ng-deep .p-dropdown {
+  width: 100%;
+}
+
+.buttons {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 576px){
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .buttons button {
+    width: 20%;
+  }
+
+  .buttons button:first-child {
+    width: 20%;
+    margin-right: 0.5rem;
+  }
+
+  .buttons button:last-child {
+    width: 20%;
+    margin-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .buttons button {
+    width: 100%;
+  }
+
+  .buttons button:first-child {
+    margin-bottom: 0.5rem;
+  }
+}

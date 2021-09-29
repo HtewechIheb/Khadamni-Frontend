@@ -18,6 +18,8 @@ import { RegisterCompanyComponent } from './register/register-company/register-c
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddOfferComponent } from './add-offer/add-offer.component';
+import { JobDescriptionFormComponent } from './add-offer/job-description-form/job-description-form.component';
+import { ProfileDetailsFormComponent } from './add-offer/profile-details-form/profile-details-form.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { AddOfferComponent } from './add-offer/add-offer.component';
     RegisterComponent,
     RegisterCandidateComponent,
     RegisterCompanyComponent,
-    AddOfferComponent
+    AddOfferComponent,
+    JobDescriptionFormComponent,
+    ProfileDetailsFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -43,8 +47,6 @@ import { AddOfferComponent } from './add-offer/add-offer.component';
     AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-
-}
+export class AppModule {}

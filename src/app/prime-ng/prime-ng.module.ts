@@ -12,6 +12,9 @@ import { RadioButtonModule } from 'primeng/radiobutton';
 import { CalendarModule } from 'primeng/calendar';
 import { StepsModule } from 'primeng/steps';
 import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 @NgModule({
   imports: [
@@ -28,6 +31,9 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     CalendarModule,
     StepsModule,
     InputTextareaModule,
+    InputNumberModule,
+    DropdownModule,
+    InputSwitchModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -43,6 +49,9 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
     CalendarModule,
     StepsModule,
     InputTextareaModule,
+    InputNumberModule,
+    DropdownModule,
+    InputSwitchModule
   ],
 })
 export class PrimeNGModule {}

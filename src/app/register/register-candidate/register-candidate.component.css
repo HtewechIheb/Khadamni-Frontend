@@ -5,10 +5,7 @@
 .header {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-}
-
-.flex-align-end {
-  align-self: flex-end;
+  font-weight: 500;
 }
 
 .entry {
@@ -76,22 +73,6 @@
   overflow: hidden;
 }
 
-.entry .upload-button {
-  background-color: #FF6700;
-  border-color: #FF6700;
-  box-shadow: none;
-}
-
-.entry .upload-button:active {
-    background: #FF6700;
-    border-color: #FF6700;
-}
-
-.entry .upload-button:hover {
-    background: #FF6700;
-    border-color: #FF6700;
-}
-
 .entry .upload-element {
   position: absolute;
   top: 0;
@@ -106,8 +87,14 @@
   margin-right: 0.5rem;
 }
 
-.entry .submit-button,
 .entry .upload-button {
   margin-bottom: 0.5rem;
+}
+
+@media screen and (max-width: 992px) {
+  .entry .p-float-label > label,
+  .entry p-radiobutton ::ng-deep label {
+    font-size: small;
+  }
 }
 

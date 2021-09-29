@@ -1,6 +1,5 @@
-import { trigger, transition, style, animate } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faInfoCircle, faTag, faVenusMars, faIdCardAlt, faFileInvoice } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faInfoCircle, faTag } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-register-company',
@@ -8,20 +7,17 @@ import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faInfoC
   styleUrls: ['./register-company.component.css'],
 })
 export class RegisterCompanyComponent implements OnInit {
-  faBuilding = faBuilding;
-  faAt = faAt;
-  faLock = faLock;
-  faPhoneAlt = faPhoneAlt;
-  faMapMarkedAlt = faMapMarkedAlt;
-  faUpload = faUpload;
-  faInfoCircle = faInfoCircle;
-  faTag = faTag;
-  faVenusMars = faVenusMars;
-  faIdCardAlt = faIdCardAlt;
-  faFileInvoice = faFileInvoice;
+  public readonly faBuilding = faBuilding;
+  public readonly faTag = faTag;
+  public readonly faAt = faAt;
+  public readonly faPhoneAlt = faPhoneAlt;
+  public readonly faLock = faLock;
+  public readonly faMapMarkedAlt = faMapMarkedAlt;
+  public readonly faUpload = faUpload;
+  public readonly faInfoCircle = faInfoCircle;
 
-  tos: boolean = false;
-  gender: string;
+  public tos: boolean = false;
+  public gender: string;
 
   constructor() {}
 

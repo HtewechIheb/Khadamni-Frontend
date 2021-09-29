@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faInfoCircle, faTag, faVenusMars, faIdCardAlt, faFileInvoice, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faTag, faVenusMars, faIdCardAlt, faFileInvoice, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-register-candidate',
@@ -7,21 +7,20 @@ import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faInfoC
   styleUrls: ['./register-candidate.component.css'],
 })
 export class RegisterCandidateComponent implements OnInit {
-  faBuilding = faBuilding;
-  faAt = faAt;
-  faLock = faLock;
-  faPhoneAlt = faPhoneAlt;
-  faMapMarkedAlt = faMapMarkedAlt;
-  faUpload = faUpload;
-  faInfoCircle = faInfoCircle;
-  faTag = faTag;
-  faVenusMars = faVenusMars;
-  faIdCardAlt = faIdCardAlt;
-  faFileInvoice = faFileInvoice;
-  faCalendarAlt = faCalendarAlt;
+  public readonly faBuilding = faBuilding;
+  public readonly faAt = faAt;
+  public readonly faTag = faTag;
+  public readonly faPhoneAlt = faPhoneAlt;
+  public readonly faLock = faLock;
+  public readonly faMapMarkedAlt = faMapMarkedAlt;
+  public readonly faUpload = faUpload;
+  public readonly faVenusMars = faVenusMars;
+  public readonly faIdCardAlt = faIdCardAlt;
+  public readonly faFileInvoice = faFileInvoice;
+  public readonly faCalendarAlt = faCalendarAlt;
 
-  tos: boolean = false;
-  gender: string;
+  public tos: boolean = false;
+  public gender: string;
 
   constructor() {}
 

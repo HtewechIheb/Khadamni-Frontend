@@ -5,10 +5,7 @@
 .header {
   padding-right: 0.5rem;
   padding-left: 0.5rem;
-}
-
-.flex-align-end {
-  align-self: flex-end;
+  font-weight: 500;
 }
 
 .entry {
@@ -19,69 +16,42 @@
   text-align: left;
 }
 
-.entry .p-inputtext {
-  border-radius: 0;
-  box-shadow: none;
-  border: none;
-  border-bottom: 1px solid #757575;
-}
-
-.entry .p-inputtext:enabled:focus {
-  box-shadow: none;
-  border: none;
-  border-bottom: 1px solid #757575;
-}
-
-.entry .p-inputtext:enabled:hover {
-  border-color: #757575;
-}
-
-.entry input, .entry textarea {
+.entry .p-inputtext, .entry .p-inputtextarea, .entry button {
   width: 100%;
 }
 
-.entry textarea {
-  resize: none;
+.entry .p-inputtext,
+.entry .p-inputtextarea {
   border-radius: 0;
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #757575;
 }
 
-.entry textarea:focus {
+.entry .p-inputtext:enabled:focus,
+.entry .p-inputtextarea:enabled:focus {
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #757575;
   outline: none;
 }
 
-.entry textarea:hover {
+.entry .p-inputtext:enabled:hover,
+.entry .p-inputtextarea:enabled:hover {
   border-color: #757575;
 }
 
-.entry button {
-  width: 100%;
+.entry textarea {
+  resize: none;
+}
+
+.entry p-checkbox ::ng-deep .p-checkbox {
+  margin-right: 0.5rem;
 }
 
 .entry .upload-button-wrapper {
   position: relative;
   overflow: hidden;
-}
-
-.entry .upload-button {
-  background-color: #FF6700;
-  border-color: #FF6700;
-  box-shadow: none;
-}
-
-.entry .upload-button:active {
-    background: #FF6700;
-    border-color: #FF6700;
-}
-
-.entry .upload-button:hover {
-    background: #FF6700;
-    border-color: #FF6700;
 }
 
 .entry .upload-element {
@@ -94,6 +64,9 @@
   cursor: pointer;
 }
 
-.entry p-checkbox ::ng-deep .p-checkbox {
-  margin-right: 0.5rem;
+@media screen and (max-width: 992px) {
+  .entry .p-float-label > label,
+  .entry p-radiobutton ::ng-deep label {
+    font-size: small;
+  }
 }
