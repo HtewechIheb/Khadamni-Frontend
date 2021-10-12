@@ -21,6 +21,7 @@ import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { JobDescriptionFormComponent } from './components/add-offer/job-description-form/job-description-form.component';
 import { ProfileDetailsFormComponent } from './components/add-offer/profile-details-form/profile-details-form.component';
 import { OfferDetailsComponent } from './components/offer-details/offer-details.component';
+import { OfferPreviewComponent } from './components/addOffer/offer-preview/offer-preview.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { OfferDetailsComponent } from './components/offer-details/offer-details.
     JobDescriptionFormComponent,
     ProfileDetailsFormComponent,
     OfferDetailsComponent,
+    OfferPreviewComponent,
   ],
   imports: [
     BrowserModule,

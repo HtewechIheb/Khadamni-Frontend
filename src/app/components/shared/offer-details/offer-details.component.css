@@ -1,17 +1,14 @@
-.container, .inner-container {
+.container {
   background-color: #FFFFFF;
   border: 1px solid rgb(0 0 0 / 14%);
   box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+  margin: 1rem;
 }
 
 @media screen and (max-width: 768px){
   .offer-info {
     text-align: center;
   }
-}
-
-.inner-container {
-  margin: 1rem;
 }
 
 .company-logo {
@@ -86,59 +83,5 @@
 
   .offer-requirements > div:last-child {
     border-bottom: none;
-  }
-}
-
-.header {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-.header .step-title {
-  font-weight: 300;
-}
-
-.buttons {
-  margin-top: 2rem;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
-}
-
-@media screen and (min-width: 576px){
-  .buttons {
-    display: flex;
-    justify-content: flex-end;
-  }
-
-  .buttons button {
-    width: 20%;
-  }
-
-  .buttons button:first-child {
-    width: 20%;
-    margin-right: 0.5rem;
-  }
-
-  .buttons button:last-child {
-    width: 20%;
-    margin-left: 0.5rem;
-  }
-}
-
-@media screen and (max-width: 576px){
-  .buttons {
-    display: flex;
-    flex-direction: column-reverse;
-  }
-
-  .buttons button {
-    width: 100%;
-  }
-
-  .buttons button:last-child {
-    margin-bottom: 0.5rem;
   }
 }

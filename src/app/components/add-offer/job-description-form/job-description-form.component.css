@@ -1,4 +1,4 @@
-.form-container {
+.container {
   background-color: #FFFFFF;
   border: 1px solid rgb(0 0 0 / 14%);
   text-align: center;
@@ -13,6 +13,7 @@
   padding-right: 0.5rem;
   padding-left: 0.5rem;
   font-weight: 500;
+  margin-bottom: 2rem;
 }
 
 .header .step-title {
@@ -88,6 +89,7 @@
 }
 
 .buttons {
+  margin-top: 2rem;
   padding-right: 1rem;
   padding-left: 1rem;
 }
