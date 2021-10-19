@@ -1,48 +1,79 @@
-p-card ::ng-deep .offers-list-item {
+.container {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(0 0 0 / 14%);
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
   margin-bottom: 1rem;
 }
 
-p-card ::ng-deep .offers-list-item .apply-button {
-  background-color: #2196F3;
-  border-color: #2196F3;
-  margin-right: 0.2rem;
-  margin-left: 0.2rem;
-  box-shadow: none;
+@media screen and (max-width: 768px){
+  .container {
+    text-align: center;
+  }
 }
 
-p-card ::ng-deep .offers-list-item .details-button {
-  background-color: #FF6700;
-  border-color: #FF6700;
-  margin-right: 0.2rem;
-  margin-left: 0.2rem;
-  box-shadow: none;
+.container > .grid {
+  margin: 0;
 }
 
-p-card ::ng-deep .offers-list-item .apply-button:enabled:active {
-    background: #2196F3;
-    border-color: #2196F3;
+.company-logo {
+  width: 100%;
 }
 
-p-card ::ng-deep .offers-list-item .details-button:enabled:active {
-    background: #FF6700;
-    border-color: #FF6700;
+@media screen and (max-width: 768px){
+  .company-logo {
+    max-height: 200px;
+    width: auto;
+  }
 }
 
-p-card ::ng-deep .offers-list-item .apply-button:enabled:hover {
-    background: #2196F3;
-    border-color: #2196F3;
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-p-card ::ng-deep .offers-list-item .details-button:enabled:hover {
-    background: #FF6700;
-    border-color: #FF6700;
+.title {
+  font-weight: 500;
+  font-size: large;
+  margin-bottom: 0.5rem;
 }
 
-p-card ::ng-deep .offers-list-item .p-button-label {
-  color: #FFFFFF;
+.subtitle {
+  font-weight: 300;
+  font-size: small;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: #888888;
 }
 
-p-card ::ng-deep .offers-list-item .p-card-footer {
+.description {
+  font-size: small;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle > fa-icon {
+  color: #4AA3E8;
+}
+
+.buttons {
   display: flex;
   justify-content: flex-end;
+  padding-top: 1rem
+}
+
+.buttons > button {
+  width: 30%;
+}
+
+@media screen and (min-width: 567px) and (max-width: 768px) {
+  .buttons {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .buttons > button {
+    width: 100%;
+  }
 }

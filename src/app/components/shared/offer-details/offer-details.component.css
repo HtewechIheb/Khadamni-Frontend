@@ -13,6 +13,10 @@
   margin-bottom: 0;
 }
 
+.container > .grid {
+  margin: 0;
+}
+
 @media screen and (max-width: 768px){
   .offer-info {
     text-align: center;
@@ -43,38 +47,38 @@
   margin-bottom: 0.5rem;
 }
 
-.offer-info > .content > .text > .subtitle > fa-icon {
+.offer-info .subtitle > fa-icon {
   color: #4AA3E8;
 }
 
-.offer-info > .content > .text > .subtitle {
+.offer-info .subtitle {
   color: #888888;
 }
 
-.offer-info > .content {
+.offer-info .content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.offer-info > .content > .buttons {
+.offer-info .buttons {
   display: flex;
   justify-content: flex-end;
   padding-top: 1rem
 }
 
-.offer-info > .content > .buttons > button {
+.offer-info .buttons > button {
   width: 30%;
 }
 
 @media screen and (min-width: 567px) and (max-width: 768px) {
-  .offer-info > .content > .buttons {
+  .offer-info .buttons {
     justify-content: center;
   }
 }
 
 @media screen and (max-width: 567px) {
-  .offer-info > .content > .buttons > button {
+  .offer-info .buttons > button {
     width: 100%;
   }
 }
@@ -90,35 +94,35 @@
 }
 
 @media screen and (min-width: 768px){
-  .offer-requirements > div:first-child {
+  .offer-requirements > .grid > div:first-child {
     border-right: 1px solid rgb(0 0 0 / 14%);
   }
 
-  .offer-requirements > div:nth-child(2) {
+  .offer-requirements > .grid > div:nth-child(2) {
     border-right: 1px solid rgb(0 0 0 / 14%);
   }
 
-  .offer-requirements > div:nth-child(4) {
+  .offer-requirements > .grid > div:nth-child(4) {
     border-top: 1px solid rgb(0 0 0 / 14%);
     border-right: 1px solid rgb(0 0 0 / 14%);
   }
 
-  .offer-requirements > div:nth-child(5) {
+  .offer-requirements > .grid > div:nth-child(5) {
     border-top: 1px solid rgb(0 0 0 / 14%);
     border-right: 1px solid rgb(0 0 0 / 14%);
   }
 
-  .offer-requirements > div:last-child {
+  .offer-requirements > .grid > div:last-child {
     border-top: 1px solid rgb(0 0 0 / 14%);
   }
 }
 
 @media screen and (max-width: 768px){
-  .offer-requirements > div {
+  .offer-requirements > .grid > div {
     border-bottom: 1px solid rgb(0 0 0 / 14%);
   }
 
-  .offer-requirements > div:last-child {
+  .offer-requirements > .grid > div:last-child {
     border-bottom: none;
   }
 }

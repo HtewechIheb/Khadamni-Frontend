@@ -18,11 +18,15 @@ a {
 }
 
 .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
-  background-color: #3A6EA5;
+  background-color: #4AA3E8;
 }
 
 .p-paginator {
   background: none;
+}
+
+.p-paginator .p-paginator-pages .p-paginator-page {
+  box-shadow: none;
 }
 
 .main-content {

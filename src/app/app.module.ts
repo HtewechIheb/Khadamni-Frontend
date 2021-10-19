@@ -23,6 +23,8 @@ import { ProfileDetailsFormComponent } from './components/add-offer/profile-deta
 import { OfferDetailsComponent } from './components/shared/offer-details/offer-details.component';
 import { OfferPreviewComponent } from './components/add-offer/offer-preview/offer-preview.component';
 import { ViewOfferComponent } from './components/view-offer/view-offer.component';
+import { ViewOffersComponent } from './view-offers/view-offers.component';
+import { AccordionModule } from 'primeng/accordion';
 
 @NgModule({
   declarations: [
@@ -43,6 +45,7 @@ import { ViewOfferComponent } from './components/view-offer/view-offer.component
     OfferDetailsComponent,
     OfferPreviewComponent,
     ViewOfferComponent,
+    ViewOffersComponent,
   ],
   imports: [
     BrowserModule,
