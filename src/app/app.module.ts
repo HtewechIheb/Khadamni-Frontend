@@ -20,8 +20,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { JobDescriptionFormComponent } from './components/add-offer/job-description-form/job-description-form.component';
 import { ProfileDetailsFormComponent } from './components/add-offer/profile-details-form/profile-details-form.component';
-import { OfferDetailsComponent } from './components/offer-details/offer-details.component';
-import { OfferPreviewComponent } from './components/addOffer/offer-preview/offer-preview.component';
+import { OfferDetailsComponent } from './components/shared/offer-details/offer-details.component';
+import { OfferPreviewComponent } from './components/add-offer/offer-preview/offer-preview.component';
+import { ViewOfferComponent } from './components/view-offer/view-offer.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { OfferPreviewComponent } from './components/addOffer/offer-preview/offer
     ProfileDetailsFormComponent,
     OfferDetailsComponent,
     OfferPreviewComponent,
+    ViewOfferComponent,
   ],
   imports: [
     BrowserModule,

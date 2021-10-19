@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { faBuilding, faClock, faMapMarkedAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,6 +7,8 @@ import { faBuilding, faClock, faMapMarkedAlt } from '@fortawesome/free-solid-svg
   styleUrls: ['./offer-details.component.css']
 })
 export class OfferDetailsComponent implements OnInit {
+  @Input() preview: boolean;
+
   faClock = faClock;
   faBuilding = faBuilding;
   faMapMarkedAlt = faMapMarkedAlt;
