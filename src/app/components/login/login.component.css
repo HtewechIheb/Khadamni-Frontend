@@ -1,0 +1,82 @@
+.container {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(0 0 0 / 14%);
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+  padding: 2rem 1rem;
+}
+
+.header {
+  font-weight: 500;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.entry {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 992px) {
+  .entry {
+    font-size: small;
+  }
+}
+
+.combo-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    font-size: small;
+  }
+}
+
+.entry .p-inputtext, .entry .p-inputtextarea, .entry button {
+  width: 100%;
+}
+
+.entry .p-inputtext {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.entry .p-inputtext:enabled:focus {
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+  outline: none;
+}
+
+.entry .p-inputtext:enabled:hover {
+  border-color: #757575;
+}
+
+.entry p-checkbox ::ng-deep .p-checkbox {
+  margin-right: 0.5rem;
+}
+
+.buttons {
+  margin-top: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.buttons button {
+  width: 100%;
+}

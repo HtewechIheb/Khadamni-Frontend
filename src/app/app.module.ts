@@ -25,6 +25,7 @@ import { OfferPreviewComponent } from './components/add-offer/offer-preview/offe
 import { ViewOfferComponent } from './components/view-offer/view-offer.component';
 import { ViewOffersComponent } from './view-offers/view-offers.component';
 import { AccordionModule } from 'primeng/accordion';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { AccordionModule } from 'primeng/accordion';
     OfferPreviewComponent,
     ViewOfferComponent,
     ViewOffersComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
