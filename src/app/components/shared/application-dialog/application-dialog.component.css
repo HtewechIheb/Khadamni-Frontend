@@ -1,8 +1,29 @@
+.background {
+  background-color: rgb(0 0 0 / 80%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+  z-index: 1000;
+}
+
 .container {
   background-color: #FFFFFF;
   border: 1px solid rgb(0 0 0 / 14%);
   box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
-  padding: 2rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: large;
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 .header {
@@ -63,11 +84,26 @@
   border-color: #757575;
 }
 
+.upload-button-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-element {
+  position: absolute;
+  top: 0;
+  left: -90px;
+  width: 150%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
 .buttons {
   margin-top: 3rem;
-  margin-bottom: 0.5rem;
 }
 
 .buttons button {
   width: 100%;
+  margin-bottom: 0.5rem;
 }

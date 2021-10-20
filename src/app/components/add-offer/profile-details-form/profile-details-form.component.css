@@ -57,10 +57,6 @@
   border-color: #757575;
 }
 
-.entry p-checkbox ::ng-deep .p-checkbox {
-  margin-right: 0.5rem;
-}
-
 @media screen and (max-width: 992px) {
   .entry .p-float-label > label,
   .entry p-radiobutton ::ng-deep label {

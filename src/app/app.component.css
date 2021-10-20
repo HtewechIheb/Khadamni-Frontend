@@ -30,6 +30,20 @@ a {
   box-shadow: none;
 }
 
+.p-checkbox {
+  margin-right: 0.5rem;
+}
+
+/* Absolutely positioned and was causing blank white space at the bottom of the page */
+.p-checkbox .p-hidden-accessible {
+  top: 0;
+}
+
+.checkbox-group {
+  display: flex;
+  align-items: center;
+}
+
 .main-content {
   color: #495057;
   margin: 1rem;

@@ -54,10 +54,6 @@
   overflow: hidden;
 }
 
-.filters .content > .entry > p-checkbox ::ng-deep .p-checkbox {
-  margin-right: 0.5rem;
-}
-
 /* Absolutely positioned and was causing blank white space at the bottom of the page */
 .filters .content > .entry > p-checkbox ::ng-deep .p-checkbox .p-hidden-accessible {
   top: 0;

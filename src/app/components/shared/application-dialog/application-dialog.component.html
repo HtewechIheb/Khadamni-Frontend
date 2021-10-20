@@ -1,0 +1,56 @@
+<div [@slideInAnimation]="!shown ? 'slideUp' : ''" class="background">
+  <div class="grid">
+    <div class="col-10 col-offset-1 md:col-6 md:col-offset-3 xl:col-4 xl:col-offset-4">
+      <div class="container">
+        <div class="close" (click)="close()">
+          <fa-icon [icon]="faTimes"></fa-icon>
+        </div>
+        <div class="header">Login</div>
+        <form class="form" #form="ngForm">
+          <div class="entry">
+            <span class="p-float-label">
+              <input inputId="email" type="email" pInputText />
+              <label for="email">
+                <fa-icon [icon]="faUser" class="button-icon"></fa-icon> Full Name
+              </label>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="p-float-label">
+              <input inputId="password" type="password" pInputText />
+              <label for="password">
+                <fa-icon [icon]="faAt" class="button-icon"></fa-icon> Email
+              </label>
+            </span>
+          </div>
+          <div class="entry">
+            <span class="p-float-label">
+              <textarea inputId="description" rows="10" pInputTextarea></textarea>
+              <label for="description">
+                <fa-icon [icon]="faScroll" class="button-icon"></fa-icon> Cover Letter
+              </label>
+            </span>
+          </div>
+          <div class="checkbox-group">
+            <p-checkbox [binary]="true"></p-checkbox>
+            <span class="checkbox-label">Attach My Resume</span>
+          </div>
+          <div class="buttons">
+            <div class="upload-button-wrapper">
+              <button pButton type="button" label=" " class="p-button app-button-safetyorange">
+                <span class="w-full">
+                  <fa-icon [icon]="faFileInvoice" class="button-icon"></fa-icon>Upload Resume
+                </span>
+              </button>
+              <input type="file" class="upload-element" />
+            </div>
+
+            <button pButton type="button" label=" " class="p-button p-button-primary">
+              <span class="w-full">Login</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
