@@ -1,0 +1,219 @@
+.container {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(0 0 0 / 14%);
+  text-align: center;
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+.form {
+  padding-top: 2rem;
+}
+
+.header {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.header .step-title {
+  font-weight: 300;
+}
+
+.entry {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px){
+  .entry {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.entry .p-inputtext {
+  width: 100%;
+}
+
+.entry .p-inputtext {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.entry .p-inputtext:enabled:focus {
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+  outline: none;
+}
+
+.entry .p-inputtext:enabled:hover {
+  border-color: #757575;
+}
+
+.entry p-checkbox ::ng-deep .p-checkbox {
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 992px) {
+  .entry .p-float-label > label,
+  .entry p-radiobutton ::ng-deep label {
+    font-size: small;
+  }
+}
+
+.entry .static-float-label {
+  display: block;
+  position: relative;
+}
+
+.entry .static-float-label > label {
+  top: -.75rem;
+  font-size: 12px;
+  position: absolute;
+  pointer-events: none;
+  margin-top: -.5rem;
+  line-height: 1;
+  left: 0.5rem;
+  color: #6c757d;
+}
+
+.entry div.skills-selector {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
+
+.entry div.skills-selector .skill-adder,
+.entry div.skills-selector .skill-badge {
+  margin: 0.2rem;
+}
+
+.entry div.skills-selector .skill-badge input {
+  border-radius: 20px;
+  background-color: #2196F3;
+  color: #FFFFFF;
+  border: none;
+  padding-left: 0.5rem;
+  font-size: small;
+  text-overflow: ellipsis;
+}
+
+.entry div.skills-selector .skill-adder input {
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  color: #2196F3;
+  border: 1px solid #2196F3;
+  padding-left: 0.5rem;
+  font-size: small;
+}
+
+.entry div.skills-selector .skill-adder input::placeholder {
+  color: #2196F3;
+  font-size: small;
+}
+
+.entry div.skills-selector .skill-badge i {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.entry div.skills-selector .skill-adder i {
+  color: #2196F3;
+  cursor: pointer;
+}
+
+.entry p-inputnumber ::ng-deep .p-inputtext,
+.entry p-dropdown ::ng-deep .p-dropdown {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.entry p-inputnumber ::ng-deep .p-inputtext:enabled:focus,
+.entry p-dropdown ::ng-deep .p-dropdown:enabled:focus {
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.entry p-inputnumber ::ng-deep .p-inputtext:enabled:hover,
+.entry p-dropdown ::ng-deep .p-dropdown:enabled:hover {
+  border-color: #757575;
+}
+
+.entry p-inputnumber ::ng-deep .p-inputnumber,
+.entry p-dropdown ::ng-deep .p-dropdown {
+  width: 100%;
+}
+
+.entry p-radioButton {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 992px){
+  .entry p-radioButton {
+    margin-top: 0.3rem;
+    width: 100%;
+  }
+}
+
+.entry .radio-label {
+  color: #6c757d;
+  margin-left: 0.5rem;
+}
+
+.entry p-radioButton ::ng-deep label {
+  margin-left: 0.2rem;
+  color: #6c757d;
+}
+
+.buttons {
+  margin-top: 2rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media screen and (min-width: 576px){
+  .buttons {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .buttons button {
+    width: 20%;
+  }
+
+  .buttons button:first-child {
+    width: 20%;
+    margin-right: 0.5rem;
+  }
+
+  .buttons button:last-child {
+    width: 20%;
+    margin-left: 0.5rem;
+  }
+}
+
+@media screen and (max-width: 576px){
+  .buttons button {
+    width: 100%;
+  }
+
+  .buttons button:first-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .entry div.skills-selector .skill-adder,
+  .entry div.skills-selector .skill-badge {
+    width: 100%;
+  }
+}

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { faAt, faBuilding, faCamera, faFileInvoice, faIdCardAlt, faInfoCircle, faLock, faMapMarkedAlt, faPhoneAlt, faTag, faUpload, faVenusMars } from '@fortawesome/free-solid-svg-icons';
 import { trigger, state, style, animate, transition, AnimationEvent } from '@angular/animations';
 
 @Component({
@@ -32,9 +31,9 @@ import { trigger, state, style, animate, transition, AnimationEvent } from '@ang
   ],
 })
 export class RegisterComponent implements OnInit {
-  registerCompany: boolean = true;
-  registerCompanySlideOutAnimation: boolean = false;
-  registerCandidateSlideOutAnimation: boolean = false;
+  public registerCompany: boolean = true;
+  public registerCompanySlideOutAnimation: boolean = false;
+  public registerCandidateSlideOutAnimation: boolean = false;
 
   constructor() {}
 

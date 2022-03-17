@@ -1,0 +1,100 @@
+.container {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(0 0 0 / 14%);
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+  margin: 1rem 0rem 1rem 0rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container:first-child {
+  margin-top: 0;
+}
+
+.container:last-child {
+  margin-bottom: 0;
+}
+
+.header {
+  font-weight: 500;
+  font-size: large;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.stat > .content {
+  font-weight: 300;
+  color: #888888;
+}
+
+.stat > .icon {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 3px;
+}
+
+.cyan {
+  color: #00BCD4;
+}
+
+.red {
+  color: #FF2020;
+}
+
+.green {
+  color: #4CAF50;
+}
+
+.cyan-icon {
+  background-color: #C2EFF5;
+  color: #00BCD4;
+}
+
+.red-icon {
+  background-color: #FFC2C2;
+  color: #FF2020;
+}
+
+.green-icon {
+  background-color: #D4ECD5;
+  color: #4CAF50;
+}
+
+.list {
+  width: 100%;
+}
+
+.list > .list-item {
+  border-top: 1px solid rgb(0 0 0 / 14%);
+  padding: 0.5rem;
+}
+
+.list > .list-item:first-child {
+  border-top: none;
+}
+
+.list > .list-item > .title {
+  font-weight: 500;
+  font-size: small;
+  margin-bottom: 0.2rem;
+}
+
+.list > .list-item > .subtitle {
+  font-weight: 300;
+  font-size: 0.7rem;
+}
+

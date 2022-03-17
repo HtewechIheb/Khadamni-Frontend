@@ -9,7 +9,12 @@ import { PaginatorModule } from 'primeng/paginator';
 import { InputTextModule } from 'primeng/inputtext';
 import { CheckboxModule } from 'primeng/checkbox';
 import { RadioButtonModule } from 'primeng/radiobutton';
-import {CalendarModule} from 'primeng/calendar';
+import { CalendarModule } from 'primeng/calendar';
+import { StepsModule } from 'primeng/steps';
+import { InputTextareaModule } from 'primeng/inputtextarea';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { DropdownModule } from 'primeng/dropdown';
+import { InputSwitchModule } from 'primeng/inputswitch';
 
 @NgModule({
   imports: [
@@ -24,6 +29,11 @@ import {CalendarModule} from 'primeng/calendar';
     CheckboxModule,
     RadioButtonModule,
     CalendarModule,
+    StepsModule,
+    InputTextareaModule,
+    InputNumberModule,
+    DropdownModule,
+    InputSwitchModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -37,6 +47,11 @@ import {CalendarModule} from 'primeng/calendar';
     CheckboxModule,
     RadioButtonModule,
     CalendarModule,
+    StepsModule,
+    InputTextareaModule,
+    InputNumberModule,
+    DropdownModule,
+    InputSwitchModule
   ],
 })
 export class PrimeNGModule {}

@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { faBell, faEnvelope, faUser, faUserTie } from '@fortawesome/free-solid-svg-icons';
 import { MenuItem } from 'primeng/api';
 

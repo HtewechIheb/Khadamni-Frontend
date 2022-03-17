@@ -1,0 +1,72 @@
+.form {
+  padding-top: 2rem;
+}
+
+.header {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  font-weight: 500;
+}
+
+.entry {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.entry .p-inputtext, .entry .p-inputtextarea, .entry button {
+  width: 100%;
+}
+
+.entry .p-inputtext,
+.entry .p-inputtextarea {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+}
+
+.entry .p-inputtext:enabled:focus,
+.entry .p-inputtextarea:enabled:focus {
+  box-shadow: none;
+  border: none;
+  border-bottom: 1px solid #757575;
+  outline: none;
+}
+
+.entry .p-inputtext:enabled:hover,
+.entry .p-inputtextarea:enabled:hover {
+  border-color: #757575;
+}
+
+.entry textarea {
+  resize: none;
+}
+
+.entry p-checkbox ::ng-deep .p-checkbox {
+  margin-right: 0.5rem;
+}
+
+.entry .upload-button-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.entry .upload-element {
+  position: absolute;
+  top: 0;
+  left: -90px;
+  width: 150%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 992px) {
+  .entry .p-float-label > label,
+  .entry p-radiobutton ::ng-deep label {
+    font-size: small;
+  }
+}

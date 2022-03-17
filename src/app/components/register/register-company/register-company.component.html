@@ -4,7 +4,7 @@
     <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
-          <input id="name" type="text" pInputText />
+          <input inputId="name" type="text" pInputText />
           <label for="name">
             <fa-icon [icon]="faBuilding" class="button-icon"></fa-icon>Company Name
           </label>
@@ -14,7 +14,7 @@
     <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
-          <input id="category" type="text" pInputText />
+          <input inputId="category" type="text" pInputText />
           <label for="category">
             <fa-icon [icon]="faTag" class="button-icon"></fa-icon>Category
           </label>
@@ -24,7 +24,7 @@
     <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
-          <input id="email" type="email" pInputText />
+          <input inputId="email" type="email" pInputText />
           <label for="email">
             <fa-icon [icon]="faAt" class="button-icon"></fa-icon>Email
           </label>
@@ -34,8 +34,8 @@
     <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
-          <input id="contact-number" type="text" pInputText />
-          <label for="contact-number">
+          <input inputId="contactnumber" type="text" pInputText />
+          <label for="contactnumber">
             <fa-icon [icon]="faPhoneAlt" class="button-icon"></fa-icon>Contact Number
           </label>
         </span>
@@ -44,7 +44,7 @@
     <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
-          <input id="password" type="password" pInputText />
+          <input inputId="password" type="password" pInputText />
           <label for="password">
             <fa-icon [icon]="faLock" class="button-icon"></fa-icon>Password
           </label>
@@ -54,8 +54,8 @@
     <div class="col-12 md:col-6 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
-          <input id="password" type="password" pInputText />
-          <label for="password">
+          <input inputId="confirmpassword" type="password" pInputText />
+          <label for="confirmpassword">
             <fa-icon [icon]="faLock" class="button-icon"></fa-icon>Confirm Password
           </label>
         </span>
@@ -64,7 +64,7 @@
     <div class="col-12 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
-          <input id="address" type="password" pInputText />
+          <input inputId="address" type="text" pInputText />
           <label for="address">
             <fa-icon [icon]="faMapMarkedAlt" class="button-icon"></fa-icon>Address
           </label>
@@ -74,8 +74,8 @@
     <div class="col-12 flex-align-end">
       <div class="entry">
         <span class="p-float-label">
-          <textarea id="address" rows="10" pInputTextarea></textarea>
-          <label for="address">
+          <textarea inputId="description" rows="10" pInputTextarea></textarea>
+          <label for="description">
             <fa-icon [icon]="faInfoCircle" class="button-icon"></fa-icon>Description
           </label>
         </span>
@@ -84,9 +84,11 @@
     <div class="col-12 flex-align-end">
       <div class="entry">
         <div class="upload-button-wrapper">
-          <button pButton type="button" label=" " class="p-button upload-button"><span style="width: 100%;">
+          <button pButton type="button" label=" " class="p-button app-button-safetyorange">
+            <span class="w-full">
               <fa-icon [icon]="faUpload" class="button-icon"></fa-icon>Upload Logo
-            </span></button>
+            </span>
+          </button>
           <input type="file" class="upload-element" />
         </div>
       </div>
@@ -94,16 +96,14 @@
     <div class="col-12 flex-align-end">
       <div class="entry">
         <p-checkbox [(ngModel)]="tos" [binary]="true"></p-checkbox>
-        <span>I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy
-            Policy</a></span>
+        <span>I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
       </div>
     </div>
     <div class="col-12 flex-align-end">
       <div class="entry">
-        <button pButton type="button" label=" " class="p-button p-button-primary submit-button"><span
-            style="width: 100%;">
-            Register
-          </span></button>
+        <button pButton type="button" label=" " class="p-button p-button-primary">
+          <span class="w-full">Register</span>
+        </button>
       </div>
     </div>
   </div>

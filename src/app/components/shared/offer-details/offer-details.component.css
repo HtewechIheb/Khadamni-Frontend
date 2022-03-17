@@ -1,0 +1,124 @@
+.container {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(0 0 0 / 14%);
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+  margin: 1rem 0rem 1rem 0rem;
+}
+
+.container:first-child {
+  margin-top: 0;
+}
+
+.container:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px){
+  .offer-info {
+    text-align: center;
+  }
+}
+
+.company-logo {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px){
+  .company-logo {
+    max-height: 200px;
+    width: auto;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: large;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: small;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.offer-info > .content > .text > .subtitle > fa-icon {
+  color: #4AA3E8;
+}
+
+.offer-info > .content > .text > .subtitle {
+  color: #888888;
+}
+
+.offer-info > .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.offer-info > .content > .buttons {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem
+}
+
+.offer-info > .content > .buttons > button {
+  width: 30%;
+}
+
+@media screen and (min-width: 567px) and (max-width: 768px) {
+  .offer-info > .content > .buttons {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 567px) {
+  .offer-info > .content > .buttons > button {
+    width: 100%;
+  }
+}
+
+.offer-requirements .title {
+  margin-bottom: 0.5rem;
+  font-size: medium;
+}
+
+.offer-requirements .content {
+  padding-left: 5px;
+  font-size: small;
+}
+
+@media screen and (min-width: 768px){
+  .offer-requirements > div:first-child {
+    border-right: 1px solid rgb(0 0 0 / 14%);
+  }
+
+  .offer-requirements > div:nth-child(2) {
+    border-right: 1px solid rgb(0 0 0 / 14%);
+  }
+
+  .offer-requirements > div:nth-child(4) {
+    border-top: 1px solid rgb(0 0 0 / 14%);
+    border-right: 1px solid rgb(0 0 0 / 14%);
+  }
+
+  .offer-requirements > div:nth-child(5) {
+    border-top: 1px solid rgb(0 0 0 / 14%);
+    border-right: 1px solid rgb(0 0 0 / 14%);
+  }
+
+  .offer-requirements > div:last-child {
+    border-top: 1px solid rgb(0 0 0 / 14%);
+  }
+}
+
+@media screen and (max-width: 768px){
+  .offer-requirements > div {
+    border-bottom: 1px solid rgb(0 0 0 / 14%);
+  }
+
+  .offer-requirements > div:last-child {
+    border-bottom: none;
+  }
+}

@@ -12,11 +12,17 @@ import { CompanyThumbnailComponent } from './components/shared/company-thumbnail
 import { OfferItemComponent } from './components/home/offers-list/offers-list-item/offers-list-item.component';
 import { OffersListComponent } from './components/home/offers-list/offers-list.component';
 import { HomeComponent } from './components/home/home.component';
-import { RegisterComponent } from './register/register.component';
-import { RegisterCandidateComponent } from './register/register-candidate/register-candidate.component';
-import { RegisterCompanyComponent } from './register/register-company/register-company.component';
+import { RegisterComponent } from './components/register/register.component';
+import { RegisterCandidateComponent } from './components/register/register-candidate/register-candidate.component';
+import { RegisterCompanyComponent } from './components/register/register-company/register-company.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddOfferComponent } from './components/add-offer/add-offer.component';
+import { JobDescriptionFormComponent } from './components/add-offer/job-description-form/job-description-form.component';
+import { ProfileDetailsFormComponent } from './components/add-offer/profile-details-form/profile-details-form.component';
+import { OfferDetailsComponent } from './components/shared/offer-details/offer-details.component';
+import { OfferPreviewComponent } from './components/add-offer/offer-preview/offer-preview.component';
+import { ViewOfferComponent } from './components/view-offer/view-offer.component';
 
 @NgModule({
   declarations: [
@@ -30,19 +36,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
     RegisterComponent,
     RegisterCandidateComponent,
-    RegisterCompanyComponent
+    RegisterCompanyComponent,
+    AddOfferComponent,
+    JobDescriptionFormComponent,
+    ProfileDetailsFormComponent,
+    OfferDetailsComponent,
+    OfferPreviewComponent,
+    ViewOfferComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     PrimeNGModule,
     FontAwesomeModule,
-    FormsModule
-    //AppRoutingModule,
+    FormsModule,
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule {
-
-}
+export class AppModule {}
