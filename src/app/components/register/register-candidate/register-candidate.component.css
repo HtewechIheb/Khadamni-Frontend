@@ -83,10 +83,6 @@
   cursor: pointer;
 }
 
-.entry p-checkbox ::ng-deep .p-checkbox {
-  margin-right: 0.5rem;
-}
-
 .entry .upload-button {
   margin-bottom: 0.5rem;
 }

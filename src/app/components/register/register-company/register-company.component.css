@@ -45,10 +45,6 @@
   resize: none;
 }
 
-.entry p-checkbox ::ng-deep .p-checkbox {
-  margin-right: 0.5rem;
-}
-
 .entry .upload-button-wrapper {
   position: relative;
   overflow: hidden;

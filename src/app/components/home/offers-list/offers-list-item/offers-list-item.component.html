@@ -1,7 +1,26 @@
-<p-card [styleClass]="'offers-list-item'" [header]="title" [subheader]="company">
-  {{ description }}
-  <ng-template pTemplate="footer">
-    <button pButton type="button" label="Apply" class="p-button apply-button"></button>
-    <button pButton type="button" label="Details" class="p-button details-button"></button>
-  </ng-template>
-</p-card>
+<div class="container offer-info">
+  <div class="grid">
+    <div class="col-12 md:col-3">
+      <img src="../../../assets/images/company.png" alt="company-logo" class="company-logo" />
+    </div>
+    <div class="col-12 md:col-9 content">
+      <div class="text">
+        <div class="title">{{ title }}</div>
+        <div class="subtitle">
+          <fa-icon [icon]="faBuilding"></fa-icon> {{ company }}
+        </div>
+        <div class="subtitle">
+          <fa-icon [icon]="faClock"></fa-icon> 12/10/2021
+        </div>
+        <div class="description">
+          {{ description }}
+        </div>
+      </div>
+      <div class="buttons">
+        <button pButton type="button" label=" " class="p-button app-button-safetyorange">
+          <span class="w-full">Apply</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="grid">
+  <div class="col-10 col-offset-1 md:col-6 md:col-offset-3 xl:col-4 xl:col-offset-4">
+    <div class="container">
+      <div class="header">Login</div>
+      <form class="form" #form="ngForm">
+        <div class="entry">
+          <span class="p-float-label">
+            <input inputId="email" type="email" pInputText />
+            <label for="email">
+              <fa-icon [icon]="faAt" class="button-icon"></fa-icon> Email
+            </label>
+          </span>
+        </div>
+        <div class="entry">
+          <span class="p-float-label">
+            <input inputId="password" type="password" pInputText />
+            <label for="password">
+              <fa-icon [icon]="faLock" class="button-icon"></fa-icon> Password
+            </label>
+          </span>
+        </div>
+        <div class="entry combo-entry">
+          <div class="checkbox-group">
+            <p-checkbox [binary]="true"></p-checkbox>
+            <span class="checkbox-label">Remember Me</span>
+          </div>
+          <a href="#">Forgot Password ?</a>
+        </div>
+        <div class="buttons">
+          <button pButton type="button" label=" " class="p-button p-button-primary">
+            <span class="w-full">Login</span>
+          </button>
+        </div>
+        <div class="footer text-center">
+          Don't Have An Account ? <a href="#">Register Here</a>
+        </div>
+      </form>
+      </div>
+    </div>
+</div>
+

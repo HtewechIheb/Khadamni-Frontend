@@ -1,0 +1,74 @@
+.container {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(0 0 0 / 14%);
+  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+}
+
+.search-input {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.search-input > .p-inputgroup {
+  width: 75%;
+}
+
+.search-input > .p-inputgroup >  input {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.filters {
+  padding: 0.5rem;
+}
+
+.filters > .header {
+  font-weight: 500;
+  font-size: large;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.filters p-accordion ::ng-deep .p-accordion .p-accordion-header:not(.p-disabled) .p-accordion-header-link:focus {
+  box-shadow: none;
+}
+
+.filters p-accordion ::ng-deep .p-accordion-content {
+  padding: 0;
+}
+
+.filters .content {
+  padding: 1rem;
+  max-height: 300px;
+  overflow: auto;
+  overflow-x: hidden;
+  vertical-align: top;
+}
+
+.filters .content > .entry {
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* Absolutely positioned and was causing blank white space at the bottom of the page */
+.filters .content > .entry > p-checkbox ::ng-deep .p-checkbox .p-hidden-accessible {
+  top: 0;
+}
+
+p-paginator ::ng-deep .p-paginator-page-options {
+  display: none;
+}
+
+@media screen and (max-width: 576px){
+  p-paginator ::ng-deep .p-paginator-page-options {
+    display: inline-flex;
+  }
+
+  p-paginator ::ng-deep .p-paginator-pages {
+    display: none;
+  }
+}
