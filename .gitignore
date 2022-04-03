@@ -1,3 +1,5 @@
+/.angular/cache
 node_modules
 Palette.png
 src/assets/images
+package-lock.json
