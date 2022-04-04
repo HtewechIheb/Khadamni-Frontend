@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faInfoCircle, faTag } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -6,7 +6,7 @@ import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faInfoC
   templateUrl: './register-company.component.html',
   styleUrls: ['./register-company.component.css'],
 })
-export class RegisterCompanyComponent implements OnInit {
+export class RegisterCompanyComponent {
   public readonly faBuilding = faBuilding;
   public readonly faTag = faTag;
   public readonly faAt = faAt;
@@ -19,7 +19,9 @@ export class RegisterCompanyComponent implements OnInit {
   public tos: boolean = false;
   public gender: string;
 
-  constructor() {}
+  @ViewChild('uploadLogoElement') uploadLogoElement: ElementRef;
 
-  ngOnInit(): void {}
+  uploadLogo(): void {
+    this.uploadLogoElement.nativeElement.click();
+  }
 }

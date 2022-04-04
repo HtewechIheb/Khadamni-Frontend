@@ -2,7 +2,6 @@
   background-color: #FFFFFF;
   border: 1px solid rgb(0 0 0 / 14%);
   text-align: center;
-  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
 }
 
 .register-types {
@@ -14,12 +13,11 @@
 .register-type {
   padding: 0.5rem;
   background: #FFFFFF;
-  border: 1px solid rgb(0 0 0 / 14%);
   border-radius: 5px;
-  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
   margin-right: 0.5rem;
   margin-left: 0.5rem;
   cursor: pointer;
+  border: 1px solid rgb(0 0 0 / 14%);
 }
 
 .register-type img {
@@ -28,5 +26,4 @@
 
 .register-type.selected {
   background-color: rgba(74, 163, 232, 0.7);
-  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
 }

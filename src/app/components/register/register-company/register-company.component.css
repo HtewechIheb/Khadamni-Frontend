@@ -3,12 +3,11 @@
 }
 
 .header {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
   font-weight: 500;
 }
 
-.entry {
+.entry,
+.action {
   padding-right: 1rem;
   padding-left: 1rem;
   margin-top: 0.5rem;
@@ -16,53 +15,44 @@
   text-align: left;
 }
 
-.entry .p-inputtext, .entry .p-inputtextarea, .entry button {
+.entry input,
+.entry textarea,
+p-button ::ng-deep button {
   width: 100%;
 }
 
-.entry .p-inputtext,
-.entry .p-inputtextarea {
+.entry input,
+.entry textarea {
   border-radius: 0;
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #757575;
 }
 
-.entry .p-inputtext:enabled:focus,
-.entry .p-inputtextarea:enabled:focus {
+.entry textarea {
+  resize: none;
+}
+
+.entry input:enabled:focus,
+.entry textarea:enabled:focus {
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #757575;
   outline: none;
 }
 
-.entry .p-inputtext:enabled:hover,
-.entry .p-inputtextarea:enabled:hover {
+.entry input:enabled:hover,
+.entry textarea:enabled:hover {
   border-color: #757575;
 }
 
-.entry textarea {
-  resize: none;
-}
-
-.entry .upload-button-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-.entry .upload-element {
-  position: absolute;
-  top: 0;
-  left: -90px;
-  width: 150%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
+.action .upload-element {
+  display: none;
 }
 
 @media screen and (max-width: 992px) {
-  .entry .p-float-label > label,
-  .entry p-radiobutton ::ng-deep label {
+
+  label {
     font-size: small;
   }
 }

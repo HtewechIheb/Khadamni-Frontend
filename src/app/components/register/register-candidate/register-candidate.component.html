@@ -1,126 +1,125 @@
 <h1 class="header">Register Candidate</h1>
 <form class="form" #form="ngForm">
   <div class="grid">
-    <div class="col-12 md:col-6 flex-align-end">
+    <div class="col-12 md:col-6 align-self-end">
       <div class="entry">
         <span class="p-float-label">
           <input inputId="firstname" type="text" pInputText />
           <label for="firstname">
-            <fa-icon [icon]="faTag" class="button-icon"></fa-icon>First Name
+            <fa-icon [icon]="faTag" class="icon-left"></fa-icon>First Name
           </label>
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 flex-align-end">
+    <div class="col-12 md:col-6 align-self-end">
       <div class="entry">
         <span class="p-float-label">
           <input inputId="lastname" type="text" pInputText />
           <label for="lastname">
-            <fa-icon [icon]="faTag" class="button-icon"></fa-icon>Last Name
+            <fa-icon [icon]="faTag" class="icon-left"></fa-icon>Last Name
           </label>
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 flex-align-end">
+    <div class="col-12 md:col-6 align-self-end">
       <div class="entry">
         <span class="p-float-label">
           <input inputId="email" type="email" pInputText />
           <label for="email">
-            <fa-icon [icon]="faAt" class="button-icon"></fa-icon>Email
+            <fa-icon [icon]="faAt" class="icon-left"></fa-icon>Email
           </label>
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 flex-align-end">
+    <div class="col-12 md:col-6 align-self-end">
       <div class="entry">
         <span class="p-float-label">
           <input inputId="contactnumber" type="text" pInputText />
           <label for="contactnumber">
-            <fa-icon [icon]="faPhoneAlt" class="button-icon"></fa-icon>Contact Number
+            <fa-icon [icon]="faPhoneAlt" class="icon-left"></fa-icon>Contact Number
           </label>
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 flex-align-end">
+    <div class="col-12 md:col-6 align-self-end">
       <div class="entry">
         <span class="p-float-label">
           <input inputId="password" type="password" pInputText />
           <label for="password">
-            <fa-icon [icon]="faLock" class="button-icon"></fa-icon>Password
+            <fa-icon [icon]="faLock" class="icon-left"></fa-icon>Password
           </label>
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 flex-align-end">
+    <div class="col-12 md:col-6 align-self-end">
       <div class="entry">
         <span class="p-float-label">
           <input inputId="confirmpassword" type="password" pInputText />
           <label for="confirmpassword">
-            <fa-icon [icon]="faLock" class="button-icon"></fa-icon>Confirm Password
+            <fa-icon [icon]="faLock" class="icon-left"></fa-icon>Confirm Password
           </label>
         </span>
       </div>
     </div>
-    <div class="col-12 flex-align-end">
+    <div class="col-12 align-self-end">
       <div class="entry">
         <span class="p-float-label">
           <input inputId="address" type="text" pInputText />
           <label for="address">
-            <fa-icon [icon]="faMapMarkedAlt" class="button-icon"></fa-icon>Address
+            <fa-icon [icon]="faMapMarkedAlt" class="icon-left"></fa-icon>Address
           </label>
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 flex-align-end">
+    <div class="col-12 md:col-6 align-self-end">
       <div class="entry">
         <span class="p-float-label">
           <p-calendar inputId="birthdate"></p-calendar>
           <label for="birthdate">
-            <fa-icon [icon]="faCalendarAlt" class="button-icon"></fa-icon>Birthdate
+            <fa-icon [icon]="faCalendarAlt" class="icon-left"></fa-icon>Birthdate
           </label>
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 flex-align-end">
+    <div class="col-12 md:col-6 align-self-end">
       <div class="entry">
         <span class="radio-label">
-          <fa-icon [icon]="faVenusMars" class="button-icon"></fa-icon>Gender:
+          <fa-icon [icon]="faVenusMars" class="icon-left"></fa-icon>Gender:
         </span>
         <p-radioButton name="gender" label="Male" value="male" [(ngModel)]="gender"></p-radioButton>
         <p-radioButton name="gender" label="Female" value="female" [(ngModel)]="gender"></p-radioButton>
       </div>
     </div>
-    <div class="col-12 flex-align-end">
-      <div class="entry">
-        <div class="upload-button-wrapper">
-          <button pButton type="button" label=" " class="p-button upload-button app-button-safetyorange">
-            <span class="w-full">
-              <fa-icon [icon]="faIdCardAlt" class="button-icon"></fa-icon>Upload Photo
+    <div class="col-12 align-self-end">
+      <div class="action">
+        <p-button styleClass="p-button-warning" class="upload-button" (onClick)="uploadPhoto()">
+          <ng-template pTemplate="content">
+            <span class="w-full font-bold">
+              <fa-icon [icon]="faIdCardAlt" class="icon-left"></fa-icon>Upload Photo
             </span>
-          </button>
-          <input type="file" class="upload-element" />
-        </div>
-        <div class="upload-button-wrapper">
-          <button pButton type="button" label=" " class="p-button upload-button app-button-safetyorange">
-            <span class="w-full">
-              <fa-icon [icon]="faFileInvoice" class="button-icon"></fa-icon>Upload Resume
+          </ng-template>
+        </p-button>
+        <input type="file" class="upload-element" #uploadPhotoElement />
+
+        <p-button styleClass="p-button-warning" class="upload-button" (onClick)="uploadResume()">
+          <ng-template pTemplate="content">
+            <span class="w-full font-bold">
+              <fa-icon [icon]="faFileInvoice" class="icon-left"></fa-icon>Upload Resume
             </span>
-          </button>
-          <input type="file" class="upload-element" />
-        </div>
+          </ng-template>
+        </p-button>
+        <input type="file" class="upload-element" #uploadResumeElement />
       </div>
     </div>
-    <div class="col-12 flex-align-end">
-      <div class="entry checkbox-group">
-        <p-checkbox [(ngModel)]="tos" [binary]="true"></p-checkbox>
-        <span class="checkbox-label">I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+    <div class="col-12 align-self-end">
+      <div class="action checkbox-group">
+        <p-checkbox [(ngModel)]="tos" [binary]="true" inputId="tos-pp"></p-checkbox>
+        <label for="tos-pp">I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
       </div>
     </div>
-    <div class="col-12 flex-align-end">
-      <div class="entry">
-        <button pButton type="button" label=" " class="p-button p-button-primary">
-          <span class="w-full">Register</span>
-        </button>
+    <div class="col-12 align-self-end">
+      <div class="action">
+        <p-button label="Register" class="p-button-primary"></p-button>
       </div>
     </div>
   </div>

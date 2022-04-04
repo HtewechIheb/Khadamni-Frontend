@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faBell, faEnvelope, faUser, faUserTie } from '@fortawesome/free-solid-svg-icons';
+import { faBell, faEnvelope, faUser, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 import { MenuItem } from 'primeng/api';
 
 @Component({
@@ -9,14 +9,12 @@ import { MenuItem } from 'primeng/api';
 })
 export class HeaderComponent implements OnInit {
   public items: MenuItem[];
-  public scrolled: boolean = false;
-  faUserTie = faUserTie;
+  faAngleDown = faAngleDown;
   faBell = faBell;
   faEnvelope = faEnvelope;
   faUser = faUser;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit() {}
 }

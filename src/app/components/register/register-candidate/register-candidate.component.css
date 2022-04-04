@@ -3,12 +3,11 @@
 }
 
 .header {
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
   font-weight: 500;
 }
 
-.entry {
+.entry,
+.action {
   padding-right: 1rem;
   padding-left: 1rem;
   margin-top: 0.5rem;
@@ -16,15 +15,14 @@
   text-align: left;
 }
 
-.entry button,
 .entry input,
-.entry p-calendar ::ng-deep .p-calendar {
+.entry p-calendar ::ng-deep .p-calendar,
+p-button ::ng-deep button {
   width: 100%;
 }
 
 .entry .radio-label {
   color: #6c757d;
-  margin-left: 0.5rem;
 }
 
 .entry p-radioButton {
@@ -32,7 +30,7 @@
   margin-left: 0.5rem;
 }
 
-@media screen and (max-width: 992px){
+@media screen and (max-width: 992px) {
   .entry p-radioButton {
     margin-top: 0.3rem;
     width: 100%;
@@ -44,53 +42,39 @@
   color: #6c757d;
 }
 
-.entry p-calendar ::ng-deep .p-inputtext {
+.entry input,
+.entry p-calendar ::ng-deep .p-calendar input {
   border-radius: 0;
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #757575;
 }
 
-.entry .p-inputtext {
-  border-radius: 0;
+.entry input:enabled:focus,
+.entry p-calendar ::ng-deep .p-calendar input:enabled:focus {
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #757575;
 }
 
-.entry .p-inputtext:enabled:focus {
-  box-shadow: none;
-  border: none;
-  border-bottom: 1px solid #757575;
-}
-
-.entry .p-inputtext:enabled:hover {
+.entry input:enabled:hover,
+.entry p-calendar ::ng-deep .p-calendar input:enabled:hover {
   border-color: #757575;
 }
 
-.entry .upload-button-wrapper {
-  position: relative;
-  overflow: hidden;
-}
-
-.entry .upload-element {
-  position: absolute;
-  top: 0;
-  left: -90px;
-  width: 150%;
-  height: 100%;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.entry .upload-button {
+.action .upload-button ::ng-deep button {
   margin-bottom: 0.5rem;
 }
 
+.action .upload-element {
+  display: none;
+}
+
 @media screen and (max-width: 992px) {
-  .entry .p-float-label > label,
+
+  label,
+  .entry .radio-label,
   .entry p-radiobutton ::ng-deep label {
     font-size: small;
   }
 }
-

@@ -1,20 +1,20 @@
-<p-menubar [styleClass]="'headernav'" [model]="items">
-  <ng-template pTemplate="start">
-    <span class="brand">
-      <fa-icon [icon]="faUserTie"></fa-icon>
-      Khadamni
-    </span>
-  </ng-template>
-  <ng-template pTemplate="end">
-    <span class="headernav-button">
-      <fa-icon [icon]="faBell" class="headernav-button-icon"></fa-icon>
-    </span>
-    <span class="headernav-button">
-      <fa-icon [icon]="faEnvelope" class="headernav-button-icon"></fa-icon>
-    </span>
-    <span class="headernav-button text-button">
-      <fa-icon [icon]="faUser" class="headernav-button-icon"></fa-icon>
-      Iheb
-    </span>
-  </ng-template>
-</p-menubar>
+<nav class="navbar">
+  <div class="container">
+    <div class="brand">
+      <a href="#">Khadamni</a>
+    </div>
+    <ul class="links">
+      <li>
+        <a href="#"><fa-icon [icon]="faBell"></fa-icon></a>
+      </li>
+      <li>
+        <a href="#"><fa-icon [icon]="faEnvelope"></fa-icon></a>
+      </li>
+      <li>
+        <a href="#">
+          <fa-icon [icon]="faUser" class="icon-left"></fa-icon>User<fa-icon [icon]="faAngleDown" class="icon-right"></fa-icon>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

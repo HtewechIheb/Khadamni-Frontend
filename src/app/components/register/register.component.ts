@@ -13,7 +13,7 @@ import { trigger, state, style, animate, transition, AnimationEvent } from '@ang
       ),
       transition('* => slideOut', [animate('0.2s ease-in')]),
       transition(':enter', [
-        style({ transform: 'translateX(-100%)', opacity: '0.0' }),
+        style({ transform: 'translateX(-100%)', opacity: '0.0' }), // The element starts in this state and transitions to its default initial state
         animate('0.2s ease-out'),
       ]),
     ]),
@@ -24,20 +24,16 @@ import { trigger, state, style, animate, transition, AnimationEvent } from '@ang
       ),
       transition('* => slideOut', [animate('0.2s ease-in')]),
       transition(':enter', [
-        style({ transform: 'translateX(100%)', opacity: '0.0' }),
+        style({ transform: 'translateX(100%)', opacity: '0.0' }), // The element starts in this state and transitions to its default initial state
         animate('0.2s ease-out'),
       ]),
     ]),
   ],
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
   public registerCompany: boolean = true;
   public registerCompanySlideOutAnimation: boolean = false;
   public registerCandidateSlideOutAnimation: boolean = false;
-
-  constructor() {}
-
-  ngOnInit(): void {}
 
   setCompanyRegisterMode() {
     this.registerCandidateSlideOutAnimation = true;

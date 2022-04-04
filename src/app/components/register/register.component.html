@@ -1,18 +1,19 @@
 <div class="grid">
   <div class="col-10 col-offset-1 md:col-8 md:col-offset-2 lg:col-6 lg:col-offset-3">
     <div class="register-types">
-      <div class="register-type register-type-company" [ngClass]="{'selected': registerCompany}" (click)="setCompanyRegisterMode()">
+      <div class="register-type register-type-company shadow-3" [ngClass]="{'selected': registerCompany}" (click)="setCompanyRegisterMode()">
         <img src="../../assets/images/company.png" alt="">
       </div>
-      <div class="register-type register-type-candidate" [ngClass]="{'selected': !registerCompany}" (click)="setCandidateRegisterMode()">
+      <div class="register-type register-type-candidate shadow-3" [ngClass]="{'selected': !registerCompany}" (click)="setCandidateRegisterMode()">
         <img src="../../assets/images/candidate.png" alt="">
       </div>
     </div>
-    <div [@companySlideAnimation]="registerCompanySlideOutAnimation ? 'slideOut' : ''" (@companySlideAnimation.done)="slideOutAnimationDone($event)" class="form-container" *ngIf="registerCompany">
+    <div [@companySlideAnimation]="registerCompanySlideOutAnimation ? 'slideOut' : ''" (@companySlideAnimation.done)="slideOutAnimationDone($event)" class="form-container shadow-3" *ngIf="registerCompany">
       <app-register-company></app-register-company>
     </div>
-    <div [@candidateSlideAnimation]="registerCandidateSlideOutAnimation ? 'slideOut' : ''" (@candidateSlideAnimation.done)="slideOutAnimationDone($event)" class="form-container" *ngIf="!registerCompany">
+    <div [@candidateSlideAnimation]="registerCandidateSlideOutAnimation ? 'slideOut' : ''" (@candidateSlideAnimation.done)="slideOutAnimationDone($event)" class="form-container shadow-3" *ngIf="!registerCompany">
       <app-register-candidate></app-register-candidate>
     </div>
   </div>
 </div>
+
