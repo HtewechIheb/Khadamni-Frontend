@@ -3,16 +3,8 @@
 }
 
 .header {
+  text-align: center;
   font-weight: 500;
-}
-
-.field,
-.button {
-  padding-right: 1rem;
-  padding-left: 1rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  text-align: left;
 }
 
 .field input,

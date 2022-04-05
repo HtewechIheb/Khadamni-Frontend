@@ -1,7 +1,7 @@
 .form-container {
   background-color: #FFFFFF;
   border: 1px solid rgb(0 0 0 / 14%);
-  text-align: center;
+  padding: 1rem;
 }
 
 .register-types {

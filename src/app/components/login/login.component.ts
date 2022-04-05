@@ -9,4 +9,8 @@ import { faAt, faLock } from '@fortawesome/free-solid-svg-icons';
 export class LoginComponent {
   faAt = faAt;
   faLock = faLock;
+
+  onSubmit(): void {
+
+  }
 }

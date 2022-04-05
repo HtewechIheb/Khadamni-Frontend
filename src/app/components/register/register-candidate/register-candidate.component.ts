@@ -32,4 +32,8 @@ export class RegisterCandidateComponent {
   uploadResume(): void {
     this.uploadResumeElement.nativeElement.click();
   }
+
+  onSubmit(): void {
+
+  }
 }

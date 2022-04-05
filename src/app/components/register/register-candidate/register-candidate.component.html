@@ -1,7 +1,7 @@
 <h1 class="header">Register Candidate</h1>
-<form class="form" #form="ngForm">
+<form class="form" #form="ngForm" (ngSubmit)="onSubmit()">
   <div class="grid">
-    <div class="col-12 md:col-6 align-self-end">
+    <div class="col-12 md:col-6">
       <div class="field">
         <span class="p-float-label">
           <input inputId="firstname" type="text" pInputText />
@@ -11,7 +11,7 @@
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 align-self-end">
+    <div class="col-12 md:col-6">
       <div class="field">
         <span class="p-float-label">
           <input inputId="lastname" type="text" pInputText />
@@ -21,7 +21,7 @@
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 align-self-end">
+    <div class="col-12 md:col-6">
       <div class="field">
         <span class="p-float-label">
           <input inputId="email" type="email" pInputText />
@@ -31,7 +31,7 @@
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 align-self-end">
+    <div class="col-12 md:col-6">
       <div class="field">
         <span class="p-float-label">
           <input inputId="contactnumber" type="text" pInputText />
@@ -41,7 +41,7 @@
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 align-self-end">
+    <div class="col-12 md:col-6">
       <div class="field">
         <span class="p-float-label">
           <input inputId="password" type="password" pInputText />
@@ -51,7 +51,7 @@
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 align-self-end">
+    <div class="col-12 md:col-6">
       <div class="field">
         <span class="p-float-label">
           <input inputId="confirmpassword" type="password" pInputText />
@@ -61,7 +61,7 @@
         </span>
       </div>
     </div>
-    <div class="col-12 align-self-end">
+    <div class="col-12">
       <div class="field">
         <span class="p-float-label">
           <input inputId="address" type="text" pInputText />
@@ -71,7 +71,7 @@
         </span>
       </div>
     </div>
-    <div class="col-12 md:col-6 align-self-end">
+    <div class="col-12 md:col-6">
       <div class="field">
         <span class="p-float-label">
           <p-calendar inputId="birthdate"></p-calendar>
@@ -90,7 +90,7 @@
         <p-radioButton name="gender" label="Female" value="female" [(ngModel)]="gender"></p-radioButton>
       </div>
     </div>
-    <div class="col-12 align-self-end">
+    <div class="col-12">
       <div class="button">
         <p-button styleClass="p-button-warning" class="upload-button" (onClick)="uploadPhoto()">
           <ng-template pTemplate="content">
@@ -111,13 +111,13 @@
         <input type="file" class="upload-element" #uploadResumeElement />
       </div>
     </div>
-    <div class="col-12 align-self-end">
+    <div class="col-12">
       <div class="button checkbox-group">
         <p-checkbox [(ngModel)]="tos" [binary]="true" inputId="tos-pp"></p-checkbox>
         <label for="tos-pp">I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
       </div>
     </div>
-    <div class="col-12 align-self-end">
+    <div class="col-12">
       <div class="button">
         <p-button label="Register" styleClass="p-button-primary"></p-button>
       </div>

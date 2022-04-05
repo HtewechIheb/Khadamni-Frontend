@@ -15,7 +15,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RegisterCandidateComponent } from './components/register/register-candidate/register-candidate.component';
 import { RegisterCompanyComponent } from './components/register/register-company/register-company.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { JobDescriptionFormComponent } from './components/add-offer/job-description-form/job-description-form.component';
@@ -57,6 +57,7 @@ import { ApplicationDialogComponent } from './components/shared/application-dial
     PrimeNGModule,
     FontAwesomeModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
   ],
   providers: [],
