@@ -1,31 +1,33 @@
-.container {
+.form-container {
   background-color: #FFFFFF;
+  text-align: center;
   border: 1px solid rgb(0 0 0 / 14%);
-  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
-  padding: 2rem 1rem;
+  padding: 1rem;
+}
+
+.form {
+  padding-top: 2rem;
 }
 
 .header {
   font-weight: 500;
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
 }
 
-.entry {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.field,
+.double-field {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 
 @media screen and (max-width: 992px) {
-  .entry {
+
+  .field,
+  .double-field {
     font-size: small;
   }
 }
 
-.combo-entry {
+.double-field {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -33,6 +35,7 @@
 
 .footer {
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 992px) {
@@ -41,33 +44,33 @@
   }
 }
 
-.entry .p-inputtext, .entry .p-inputtextarea, .entry button {
+.field input {
   width: 100%;
 }
 
-.entry .p-inputtext {
+.field input {
   border-radius: 0;
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #757575;
 }
 
-.entry .p-inputtext:enabled:focus {
+.field input:enabled:focus {
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #757575;
   outline: none;
 }
 
-.entry .p-inputtext:enabled:hover {
+.field input:enabled:hover {
   border-color: #757575;
 }
 
-.buttons {
+.button {
   margin-top: 3rem;
   margin-bottom: 0.5rem;
 }
 
-.buttons button {
+.button p-button ::ng-deep button {
   width: 100%;
 }

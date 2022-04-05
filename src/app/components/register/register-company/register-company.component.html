@@ -2,7 +2,7 @@
 <form class="form" #form="ngForm">
   <div class="grid">
     <div class="col-12 md:col-6 align-self-end">
-      <div class="entry">
+      <div class="field">
         <span class="p-float-label">
           <input inputId="name" type="text" pInputText />
           <label for="name">
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="col-12 md:col-6 align-self-end">
-      <div class="entry">
+      <div class="field">
         <span class="p-float-label">
           <input inputId="category" type="text" pInputText />
           <label for="category">
@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="col-12 md:col-6 align-self-end">
-      <div class="entry">
+      <div class="field">
         <span class="p-float-label">
           <input inputId="email" type="email" pInputText />
           <label for="email">
@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="col-12 md:col-6 align-self-end">
-      <div class="entry">
+      <div class="field">
         <span class="p-float-label">
           <input inputId="contactnumber" type="text" pInputText />
           <label for="contactnumber">
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="col-12 md:col-6 align-self-end">
-      <div class="entry">
+      <div class="field">
         <span class="p-float-label">
           <input inputId="password" type="password" pInputText />
           <label for="password">
@@ -52,7 +52,7 @@
       </div>
     </div>
     <div class="col-12 md:col-6 align-self-end">
-      <div class="entry">
+      <div class="field">
         <span class="p-float-label">
           <input inputId="confirmpassword" type="password" pInputText />
           <label for="confirmpassword">
@@ -62,7 +62,7 @@
       </div>
     </div>
     <div class="col-12 align-self-end">
-      <div class="entry">
+      <div class="field">
         <span class="p-float-label">
           <input inputId="address" type="text" pInputText />
           <label for="address">
@@ -72,7 +72,7 @@
       </div>
     </div>
     <div class="col-12 align-self-end">
-      <div class="entry">
+      <div class="field">
         <span class="p-float-label">
           <textarea inputId="description" rows="10" pInputTextarea></textarea>
           <label for="description">
@@ -82,7 +82,7 @@
       </div>
     </div>
     <div class="col-12 align-self-end">
-      <div class="action">
+      <div class="button">
         <p-button styleClass="p-button-warning" (onClick)="uploadLogo()">
           <ng-template pTemplate="content">
             <span class="w-full font-bold">
@@ -94,14 +94,14 @@
       </div>
     </div>
     <div class="col-12 align-self-end">
-      <div class="action checkbox-group">
+      <div class="button checkbox-group">
         <p-checkbox [(ngModel)]="tos" [binary]="true" inputId="tos-pp"></p-checkbox>
-        <label for="tos-pp">I have read and accept the <a href="#">terms of service</a> and <a href="#">privacy policy</a></label>
+        <label for="tos-pp">I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
       </div>
     </div>
     <div class="col-12 align-self-end">
-      <div class="action">
-        <p-button label="Register" class="p-button-primary"></p-button>
+      <div class="button">
+        <p-button label="Register" styleClass="p-button-primary"></p-button>
       </div>
     </div>
   </div>

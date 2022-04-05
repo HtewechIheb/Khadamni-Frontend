@@ -6,13 +6,7 @@ import { faAt, faLock } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   faAt = faAt;
   faLock = faLock;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

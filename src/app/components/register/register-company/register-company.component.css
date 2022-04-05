@@ -6,8 +6,8 @@
   font-weight: 500;
 }
 
-.entry,
-.action {
+.field,
+.button {
   padding-right: 1rem;
   padding-left: 1rem;
   margin-top: 0.5rem;
@@ -15,38 +15,38 @@
   text-align: left;
 }
 
-.entry input,
-.entry textarea,
+.field input,
+.field textarea,
 p-button ::ng-deep button {
   width: 100%;
 }
 
-.entry input,
-.entry textarea {
+.field input,
+.field textarea {
   border-radius: 0;
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #757575;
 }
 
-.entry textarea {
+.field textarea {
   resize: none;
 }
 
-.entry input:enabled:focus,
-.entry textarea:enabled:focus {
+.field input:enabled:focus,
+.field textarea:enabled:focus {
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #757575;
   outline: none;
 }
 
-.entry input:enabled:hover,
-.entry textarea:enabled:hover {
+.field input:enabled:hover,
+.field textarea:enabled:hover {
   border-color: #757575;
 }
 
-.action .upload-element {
+.button .upload-element {
   display: none;
 }
 

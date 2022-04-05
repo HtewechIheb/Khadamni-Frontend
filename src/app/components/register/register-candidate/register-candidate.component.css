@@ -6,8 +6,8 @@
   font-weight: 500;
 }
 
-.entry,
-.action {
+.field,
+.button {
   padding-right: 1rem;
   padding-left: 1rem;
   margin-top: 0.5rem;
@@ -15,66 +15,66 @@
   text-align: left;
 }
 
-.entry input,
-.entry p-calendar ::ng-deep .p-calendar,
+.field input,
+.field p-calendar ::ng-deep .p-calendar,
 p-button ::ng-deep button {
   width: 100%;
 }
 
-.entry .radio-label {
+.field .radio-label {
   color: #6c757d;
 }
 
-.entry p-radioButton {
+.field p-radioButton {
   margin-right: 0.5rem;
   margin-left: 0.5rem;
 }
 
 @media screen and (max-width: 992px) {
-  .entry p-radioButton {
+  .field p-radioButton {
     margin-top: 0.3rem;
     width: 100%;
   }
 }
 
-.entry p-radioButton ::ng-deep label {
+.field p-radioButton ::ng-deep label {
   margin-left: 0.2rem;
   color: #6c757d;
 }
 
-.entry input,
-.entry p-calendar ::ng-deep .p-calendar input {
+.field input,
+.field p-calendar ::ng-deep .p-calendar input {
   border-radius: 0;
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #757575;
 }
 
-.entry input:enabled:focus,
-.entry p-calendar ::ng-deep .p-calendar input:enabled:focus {
+.field input:enabled:focus,
+.field p-calendar ::ng-deep .p-calendar input:enabled:focus {
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #757575;
 }
 
-.entry input:enabled:hover,
-.entry p-calendar ::ng-deep .p-calendar input:enabled:hover {
+.field input:enabled:hover,
+.field p-calendar ::ng-deep .p-calendar input:enabled:hover {
   border-color: #757575;
 }
 
-.action .upload-button ::ng-deep button {
+.button .upload-button ::ng-deep button {
   margin-bottom: 0.5rem;
 }
 
-.action .upload-element {
+.button .upload-element {
   display: none;
 }
 
 @media screen and (max-width: 992px) {
 
   label,
-  .entry .radio-label,
-  .entry p-radiobutton ::ng-deep label {
+  .field .radio-label,
+  .field p-radiobutton ::ng-deep label {
     font-size: small;
   }
 }
