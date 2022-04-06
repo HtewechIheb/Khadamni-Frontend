@@ -7,66 +7,82 @@
   font-weight: 500;
 }
 
-.field input,
-.field p-calendar ::ng-deep .p-calendar,
+.form-field {
+  margin-bottom: 0.75rem;
+}
+
+.form-field input,
+.form-field p-calendar ::ng-deep .p-calendar,
 p-button ::ng-deep button {
   width: 100%;
 }
 
-.field .radio-label {
+.form-field .radio-label {
   color: #6c757d;
 }
 
-.field p-radioButton {
+.form-field p-radioButton {
   margin-right: 0.5rem;
   margin-left: 0.5rem;
 }
 
 @media screen and (max-width: 992px) {
-  .field p-radioButton {
+  .form-field p-radioButton {
     margin-top: 0.3rem;
     width: 100%;
   }
 }
 
-.field p-radioButton ::ng-deep label {
+.form-field p-radioButton ::ng-deep label {
   margin-left: 0.2rem;
   color: #6c757d;
 }
 
-.field input,
-.field p-calendar ::ng-deep .p-calendar input {
+.form-field input,
+.form-field p-calendar ::ng-deep .p-calendar input {
   border-radius: 0;
   box-shadow: none;
-  border: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.form-field input:not(.ng-dirty.ng-invalid),
+.form-field p-calendar ::ng-deep .p-calendar input:not(.ng-dirty.ng-invalid) {
   border-bottom: 1px solid #757575;
 }
 
-.field input:enabled:focus,
-.field p-calendar ::ng-deep .p-calendar input:enabled:focus {
-  box-shadow: none;
-  border: none;
+.form-field input:enabled:not(.ng-dirty.ng-invalid):focus,
+.form-field p-calendar ::ng-deep .p-calendar input:not(.ng-dirty.ng-invalid):enabled:focus {
   border-bottom: 1px solid #757575;
 }
 
-.field input:enabled:hover,
-.field p-calendar ::ng-deep .p-calendar input:enabled:hover {
-  border-color: #757575;
+.form-field input:enabled:not(.ng-dirty.ng-invalid):hover,
+.form-field p-calendar ::ng-deep .p-calendar input:not(.ng-dirty.ng-invalid):enabled:hover {
+  border-bottom: 1px solid #757575;
 }
 
-.button .upload-button ::ng-deep button {
+.errors {
+  color: #e24c4c;
+}
+
+.errors>div {
+  margin-top: 0.75rem;
+}
+
+.upload-button ::ng-deep button {
   margin-bottom: 0.5rem;
 }
 
-.button .upload-element {
+.upload-element {
   display: none;
 }
 
 @media screen and (max-width: 992px) {
 
   label,
-  .field .radio-label,
-  .field p-radiobutton ::ng-deep label {
+  .form-field .radio-label,
+  .form-field p-radiobutton ::ng-deep label {
     font-size: small;
   }
 }

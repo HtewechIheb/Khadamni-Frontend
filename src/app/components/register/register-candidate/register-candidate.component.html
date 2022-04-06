@@ -1,126 +1,128 @@
 <h1 class="header">Register Candidate</h1>
-<form class="form" #form="ngForm" (ngSubmit)="onSubmit()">
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="grid">
-    <div class="col-12 md:col-6">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="firstname" type="text" pInputText />
-          <label for="firstname">
-            <fa-icon [icon]="faTag" class="icon-left"></fa-icon>First Name
-          </label>
-        </span>
+    <div class="form-field col-12 md:col-6">
+      <span class="p-float-label">
+        <input inputId="firstname" type="text" pInputText required formControlName="firstName" [ngClass]="{ 'ng-invalid': submitted && formControls.firstName.errors, 'ng-dirty': submitted && formControls.firstName.errors }" />
+        <label for="firstname">
+          <fa-icon [icon]="faTag" class="icon-left"></fa-icon>First Name
+        </label>
+      </span>
+      <div *ngIf="submitted && formControls.firstName.errors" class="errors">
+        <div *ngIf="formControls.firstName.errors.required">First Name is required</div>
       </div>
     </div>
-    <div class="col-12 md:col-6">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="lastname" type="text" pInputText />
-          <label for="lastname">
-            <fa-icon [icon]="faTag" class="icon-left"></fa-icon>Last Name
-          </label>
-        </span>
+    <div class="form-field col-12 md:col-6">
+      <span class="p-float-label">
+        <input inputId="lastname" type="text" pInputText required formControlName="lastName" [ngClass]="{ 'ng-invalid': submitted && formControls.lastName.errors, 'ng-dirty': submitted && formControls.lastName.errors }" />
+        <label for="lastname">
+          <fa-icon [icon]="faTag" class="icon-left"></fa-icon>Last Name
+        </label>
+      </span>
+      <div *ngIf="submitted && formControls.lastName.errors" class="errors">
+        <div *ngIf="formControls.lastName.errors.required">First Name is required</div>
       </div>
     </div>
-    <div class="col-12 md:col-6">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="email" type="email" pInputText />
-          <label for="email">
-            <fa-icon [icon]="faAt" class="icon-left"></fa-icon>Email
-          </label>
-        </span>
+    <div class="form-field col-12 md:col-6">
+      <span class="p-float-label">
+        <input inputId="email" type="email" pInputText required formControlName="email" [ngClass]="{ 'ng-invalid': submitted && formControls.email.errors, 'ng-dirty': submitted && formControls.email.errors }" />
+        <label for="email">
+          <fa-icon [icon]="faAt" class="icon-left"></fa-icon>Email
+        </label>
+      </span>
+      <div *ngIf="submitted && formControls.email.errors" class="errors">
+        <div *ngIf="formControls.email.errors.required">Email is required</div>
       </div>
     </div>
-    <div class="col-12 md:col-6">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="contactnumber" type="text" pInputText />
-          <label for="contactnumber">
-            <fa-icon [icon]="faPhoneAlt" class="icon-left"></fa-icon>Contact Number
-          </label>
-        </span>
-      </div>
+    <div class="form-field col-12 md:col-6">
+      <span class="p-float-label">
+        <input inputId="contactnumber" type="text" pInputText formControlName="contactNumber" />
+        <label for="contactnumber">
+          <fa-icon [icon]="faPhoneAlt" class="icon-left"></fa-icon>Contact Number
+        </label>
+      </span>
     </div>
-    <div class="col-12 md:col-6">
-      <div class="field">
+    <div class="form-field col-12 md:col-6">
         <span class="p-float-label">
-          <input inputId="password" type="password" pInputText />
+          <input inputId="password" type="password" pInputText required formControlName="password" [ngClass]="{ 'ng-invalid': submitted && formControls.password.errors, 'ng-dirty': submitted && formControls.password.errors }" />
           <label for="password">
             <fa-icon [icon]="faLock" class="icon-left"></fa-icon>Password
           </label>
         </span>
+        <div *ngIf="submitted && formControls.password.errors" class="errors">
+          <div *ngIf="formControls.password.errors.required">Password is required</div>
+        </div>
+    </div>
+    <div class="form-field col-12 md:col-6">
+      <span class="p-float-label">
+        <input inputId="confirmpassword" type="password" pInputText formControlName="confirmPassword" [ngClass]="{ 'ng-invalid': submitted && form.errors?.passwordsMatch, 'ng-dirty': submitted && form.errors?.passwordsMatch }" />
+        <label for="confirmpassword">
+          <fa-icon [icon]="faLock" class="icon-left"></fa-icon>Confirm Password
+        </label>
+      </span>
+      <div *ngIf="submitted && form.errors" class="errors">
+        <div *ngIf="form.errors.passwordsMatch">Passwords do not match</div>
       </div>
     </div>
-    <div class="col-12 md:col-6">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="confirmpassword" type="password" pInputText />
-          <label for="confirmpassword">
-            <fa-icon [icon]="faLock" class="icon-left"></fa-icon>Confirm Password
-          </label>
-        </span>
+    <div class="form-field col-12">
+      <span class="p-float-label">
+        <input inputId="address" type="text" pInputText required formControlName="address" />
+        <label for="address">
+          <fa-icon [icon]="faMapMarkedAlt" class="icon-left"></fa-icon>Address
+        </label>
+      </span>
+    </div>
+    <div class="form-field col-12 md:col-6">
+      <span class="p-float-label">
+        <p-calendar inputId="birthdate" required formControlName="birthdate"></p-calendar>
+        <label for="birthdate">
+          <fa-icon [icon]="faCalendarAlt" class="icon-left"></fa-icon>Birthdate
+        </label>
+      </span>
+    </div>
+    <div class="form-field align-self-center col-12 md:col-6">
+      <span class="radio-label">
+        <fa-icon [icon]="faVenusMars" class="icon-left"></fa-icon>Gender:
+      </span>
+      <p-radioButton name="gender" label="Male" value="male" formControlName="gender" [ngClass]="{ 'ng-invalid': submitted && formControls.gender.errors, 'ng-dirty': submitted && formControls.gender.errors }"></p-radioButton>
+      <p-radioButton name="gender" label="Female" value="female" formControlName="gender" [ngClass]="{ 'ng-invalid': submitted && formControls.gender.errors, 'ng-dirty': submitted && formControls.gender.errors }"></p-radioButton>
+      <div *ngIf="submitted && formControls.gender.errors" class="errors">
+        <div *ngIf="formControls.gender.errors.required">Gender is required</div>
       </div>
     </div>
     <div class="col-12">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="address" type="text" pInputText />
-          <label for="address">
-            <fa-icon [icon]="faMapMarkedAlt" class="icon-left"></fa-icon>Address
-          </label>
-        </span>
-      </div>
-    </div>
-    <div class="col-12 md:col-6">
-      <div class="field">
-        <span class="p-float-label">
-          <p-calendar inputId="birthdate"></p-calendar>
-          <label for="birthdate">
-            <fa-icon [icon]="faCalendarAlt" class="icon-left"></fa-icon>Birthdate
-          </label>
-        </span>
-      </div>
-    </div>
-    <div class="col-12 md:col-6 align-self-end">
-      <div class="field">
-        <span class="radio-label">
-          <fa-icon [icon]="faVenusMars" class="icon-left"></fa-icon>Gender:
-        </span>
-        <p-radioButton name="gender" label="Male" value="male" [(ngModel)]="gender"></p-radioButton>
-        <p-radioButton name="gender" label="Female" value="female" [(ngModel)]="gender"></p-radioButton>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="button">
-        <p-button styleClass="p-button-warning" class="upload-button" (onClick)="uploadPhoto()">
-          <ng-template pTemplate="content">
-            <span class="w-full font-bold">
-              <fa-icon [icon]="faIdCardAlt" class="icon-left"></fa-icon>Upload Photo
-            </span>
-          </ng-template>
-        </p-button>
-        <input type="file" class="upload-element" #uploadPhotoElement />
+      <p-button styleClass="p-button-warning" class="upload-button" (onClick)="uploadPhoto()">
+        <ng-template pTemplate="content">
+          <span class="w-full font-bold">
+            <fa-icon [icon]="faIdCardAlt" class="icon-left"></fa-icon>Upload Photo
+          </span>
+        </ng-template>
+      </p-button>
+      <input type="file" class="upload-element" #uploadPhotoElement formControlName="photoFile" />
 
-        <p-button styleClass="p-button-warning" class="upload-button" (onClick)="uploadResume()">
-          <ng-template pTemplate="content">
-            <span class="w-full font-bold">
-              <fa-icon [icon]="faFileInvoice" class="icon-left"></fa-icon>Upload Resume
-            </span>
-          </ng-template>
-        </p-button>
-        <input type="file" class="upload-element" #uploadResumeElement />
+      <p-button styleClass="p-button-warning" class="upload-button" (onClick)="uploadResume()">
+        <ng-template pTemplate="content">
+          <span class="w-full font-bold">
+            <fa-icon [icon]="faFileInvoice" class="icon-left"></fa-icon>Upload Resume
+          </span>
+        </ng-template>
+      </p-button>
+      <input type="file" class="upload-element" #uploadResumeElement required formControlName="resumeFile" />
+      <div *ngIf="submitted && formControls.resumeFile.errors" class="errors">
+        <div *ngIf="formControls.resumeFile.errors.required">Resume is required</div>
       </div>
     </div>
     <div class="col-12">
-      <div class="button checkbox-group">
-        <p-checkbox [(ngModel)]="tos" [binary]="true" inputId="tos-pp"></p-checkbox>
+      <div class="checkbox-group">
+        <p-checkbox [binary]="true" inputId="tos-pp" [formControl]="formControls.tos" required [ngClass]="{ 'ng-invalid': submitted && formControls.tos.errors, 'ng-dirty': submitted && formControls.tos.errors }"></p-checkbox>
         <label for="tos-pp">I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
       </div>
+      <div *ngIf="submitted && formControls.tos.errors" class="errors">
+        <div>You must accept the terms of service and privacy policy</div>
+      </div>
     </div>
     <div class="col-12">
-      <div class="button">
-        <p-button label="Register" styleClass="p-button-primary"></p-button>
-      </div>
+      <p-button type="submit" label="Register" styleClass="p-button-primary"></p-button>
     </div>
   </div>
 </form>

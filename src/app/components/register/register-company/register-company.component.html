@@ -1,131 +1,109 @@
 <h1 class="header">Register Company</h1>
 <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
   <div class="grid">
-    <div class="col-12 md:col-6">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="name" type="text" pInputText formControlName="name" required [ngClass]="{ 'ng-invalid': submitted && formControls.name.errors, 'ng-dirty': submitted && formControls.name.errors }" />
-          <label for="name">
-            <fa-icon [icon]="faBuilding" class="icon-left"></fa-icon>Company Name
-          </label>
-        </span>
-        <div *ngIf="submitted && formControls.name.errors" class="errors">
-          <div *ngIf="formControls.name.errors.required">Company Name is required</div>
-        </div>
+    <div class="form-field col-12 md:col-6">
+      <span class="p-float-label">
+        <input inputId="name" type="text" pInputText formControlName="name" required [ngClass]="{ 'ng-invalid': submitted && formControls.name.errors, 'ng-dirty': submitted && formControls.name.errors }" />
+        <label for="name">
+          <fa-icon [icon]="faBuilding" class="icon-left"></fa-icon>Company Name
+        </label>
+      </span>
+      <div *ngIf="submitted && formControls.name.errors" class="errors">
+        <div *ngIf="formControls.name.errors.required">Company Name is required</div>
       </div>
     </div>
-    <div class="col-12 md:col-6">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="category" type="text" pInputText formControlName="category" />
-          <label for="category">
-            <fa-icon [icon]="faTag" class="icon-left"></fa-icon>Category
-          </label>
-        </span>
+    <div class="form-field col-12 md:col-6">
+      <span class="p-float-label">
+        <input inputId="category" type="text" pInputText formControlName="category" />
+        <label for="category">
+          <fa-icon [icon]="faTag" class="icon-left"></fa-icon>Category
+        </label>
+      </span>
+    </div>
+    <div class="form-field col-12 md:col-6">
+      <span class="p-float-label">
+        <input inputId="email" type="email" pInputText formControlName="email" required [ngClass]="{ 'ng-invalid': submitted && formControls.email.errors, 'ng-dirty': submitted && formControls.email.errors }" />
+        <label for="email">
+          <fa-icon [icon]="faAt" class="icon-left"></fa-icon>Email
+        </label>
+      </span>
+      <div *ngIf="submitted && formControls.email.errors" class="errors">
+        <div *ngIf="formControls.email.errors.required">Email is required</div>
       </div>
     </div>
-    <div class="col-12 md:col-6">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="email" type="email" pInputText formControlName="email" required [ngClass]="{ 'ng-invalid': submitted && formControls.email.errors, 'ng-dirty': submitted && formControls.email.errors }" />
-          <label for="email">
-            <fa-icon [icon]="faAt" class="icon-left"></fa-icon>Email
-          </label>
-        </span>
-        <div *ngIf="submitted && formControls.email.errors" class="errors">
-          <div *ngIf="formControls.email.errors.required">Email is required</div>
-        </div>
+    <div class="form-field col-12 md:col-6">
+      <span class="p-float-label">
+        <input inputId="contactnumber" type="text" pInputText formControlName="contactNumber" />
+        <label for="contactnumber">
+          <fa-icon [icon]="faPhoneAlt" class="icon-left"></fa-icon>Contact Number
+        </label>
+      </span>
+    </div>
+    <div class="form-field col-12 md:col-6">
+      <span class="p-float-label">
+        <input inputId="password" type="password" pInputText formControlName="password" required [ngClass]="{ 'ng-invalid': submitted && formControls.password.errors, 'ng-dirty': submitted && formControls.password.errors }" />
+        <label for="password">
+          <fa-icon [icon]="faLock" class="icon-left"></fa-icon>Password
+        </label>
+      </span>
+      <div *ngIf="submitted && formControls.password.errors" class="errors">
+        <div *ngIf="formControls.password.errors.required">Password is required</div>
       </div>
     </div>
-    <div class="col-12 md:col-6">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="contactnumber" type="text" pInputText formControlName="contactNumber" />
-          <label for="contactnumber">
-            <fa-icon [icon]="faPhoneAlt" class="icon-left"></fa-icon>Contact Number
-          </label>
-        </span>
+    <div class="form-field col-12 md:col-6">
+      <span class="p-float-label">
+        <input inputId="confirmpassword" type="password" pInputText formControlName="confirmPassword" [ngClass]="{ 'ng-invalid': submitted && form.errors && form.errors.passwordsMatch, 'ng-dirty': submitted && form.errors && form.errors.passwordsMatch }" />
+        <label for="confirmpassword">
+          <fa-icon [icon]="faLock" class="icon-left"></fa-icon>Confirm Password
+        </label>
+      </span>
+      <div *ngIf="submitted && form.errors && form.errors.passwordsMatch" class="errors">
+        <div *ngIf="form.errors.passwordsMatch">Passwords do not match</div>
       </div>
     </div>
-    <div class="col-12 md:col-6">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="password" type="password" pInputText formControlName="password" required [ngClass]="{ 'ng-invalid': submitted && formControls.password.errors, 'ng-dirty': submitted && formControls.password.errors }" />
-          <label for="password">
-            <fa-icon [icon]="faLock" class="icon-left"></fa-icon>Password
-          </label>
-        </span>
-        <div *ngIf="submitted && formControls.password.errors" class="errors">
-          <div *ngIf="formControls.password.errors.required">Password is required</div>
-        </div>
+    <div class="form-field col-12">
+      <span class="p-float-label">
+        <input inputId="address" type="text" pInputText formControlName="address" required [ngClass]="{ 'ng-invalid': submitted && formControls.address.errors, 'ng-dirty': submitted && formControls.address.errors }" />
+        <label for="address">
+          <fa-icon [icon]="faMapMarkedAlt" class="icon-left"></fa-icon>Address
+        </label>
+      </span>
+      <div *ngIf="submitted && formControls.address.errors" class="errors">
+        <div *ngIf="formControls.address.errors.required">Address is required</div>
       </div>
     </div>
-    <div class="col-12 md:col-6">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="confirmpassword" type="password" pInputText formControlName="confirmPassword" [ngClass]="{ 'ng-invalid': submitted && form.errors && form.errors.passwordsMatch, 'ng-dirty': submitted && form.errors && form.errors.passwordsMatch }" />
-          <label for="confirmpassword">
-            <fa-icon [icon]="faLock" class="icon-left"></fa-icon>Confirm Password
-          </label>
-        </span>
-        <div *ngIf="submitted && form.errors && form.errors.passwordsMatch" class="errors">
-          <div *ngIf="form.errors.passwordsMatch">Passwords do not match</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="field">
-        <span class="p-float-label">
-          <input inputId="address" type="text" pInputText formControlName="address" required [ngClass]="{ 'ng-invalid': submitted && formControls.address.errors, 'ng-dirty': submitted && formControls.address.errors }" />
-          <label for="address">
-            <fa-icon [icon]="faMapMarkedAlt" class="icon-left"></fa-icon>Address
-          </label>
-        </span>
-        <div *ngIf="submitted && formControls.address.errors" class="errors">
-          <div *ngIf="formControls.address.errors.required">Address is required</div>
-        </div>
+    <div class="form-field col-12">
+      <span class="p-float-label">
+        <textarea inputId="description" rows="10" pInputTextarea formControlName="description" required [ngClass]="{ 'ng-invalid': submitted && formControls.description.errors, 'ng-dirty': submitted && formControls.description.errors }"></textarea>
+        <label for="description">
+          <fa-icon [icon]="faInfoCircle" class="icon-left"></fa-icon>Description
+        </label>
+      </span>
+      <div *ngIf="submitted && formControls.description.errors" class="errors">
+        <div *ngIf="formControls.description.errors.required">Description is required</div>
       </div>
     </div>
     <div class="col-12">
-      <div class="field">
-        <span class="p-float-label">
-          <textarea inputId="description" rows="10" pInputTextarea formControlName="description" required [ngClass]="{ 'ng-invalid': submitted && formControls.description.errors, 'ng-dirty': submitted && formControls.description.errors }"></textarea>
-          <label for="description">
-            <fa-icon [icon]="faInfoCircle" class="icon-left"></fa-icon>Description
-          </label>
-        </span>
-        <div *ngIf="submitted && formControls.description.errors" class="errors">
-          <div *ngIf="formControls.description.errors.required">Description is required</div>
-        </div>
+      <p-button styleClass="p-button-warning" (onClick)="uploadLogo()">
+        <ng-template pTemplate="content">
+          <span class="w-full font-bold">
+            <fa-icon [icon]="faUpload" class="icon-left"></fa-icon>Upload Logo
+          </span>
+        </ng-template>
+      </p-button>
+      <input type="file" class="upload-element" #uploadLogoElement formControlName="logoFile" />
+    </div>
+    <div class="col-12">
+      <div class="checkbox-group">
+        <p-checkbox [binary]="true" inputId="tos-pp" [formControl]="formControls.tos" required [ngClass]="{ 'ng-invalid': submitted && formControls.tos.errors, 'ng-dirty': submitted && formControls.tos.errors }"></p-checkbox>
+        <label for="tos-pp">I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+      </div>
+      <div *ngIf="submitted && formControls.tos.errors" class="errors">
+        <div>You must accept the terms of service and privacy policy</div>
       </div>
     </div>
     <div class="col-12">
-      <div class="button">
-        <p-button styleClass="p-button-warning" (onClick)="uploadLogo()">
-          <ng-template pTemplate="content">
-            <span class="w-full font-bold">
-              <fa-icon [icon]="faUpload" class="icon-left"></fa-icon>Upload Logo
-            </span>
-          </ng-template>
-        </p-button>
-        <input type="file" class="upload-element" #uploadLogoElement formControlName="logoFile" />
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="field">
-        <div class="checkbox-group">
-          <p-checkbox [binary]="true" inputId="tos-pp" [formControl]="formControls.tos" required></p-checkbox>
-          <label for="tos-pp">I have read and accept the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
-        </div>
-        <div *ngIf="submitted && formControls.tos.errors" class="errors">
-          <div *ngIf="formControls.tos.errors.required || formControls.tos.errors.pattern">You must accept the terms of service and privacy policy</div>
-        </div>
-      </div>
-    </div>
-    <div class="col-12">
-      <div class="button">
-        <p-button type="submit" label="Register" [loading]="loading" styleClass="p-button-primary"></p-button>
-      </div>
+      <p-button type="submit" label="Register" [loading]="loading" styleClass="p-button-primary"></p-button>
     </div>
   </div>
 </form>

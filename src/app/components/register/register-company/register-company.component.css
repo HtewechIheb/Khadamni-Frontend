@@ -7,14 +7,18 @@
   font-weight: 500;
 }
 
-.field input,
-.field textarea,
+.form-field {
+  margin-bottom: 0.75rem;
+}
+
+.form-field input,
+.form-field textarea,
 p-button ::ng-deep button {
   width: 100%;
 }
 
-.field input,
-.field textarea {
+.form-field input,
+.form-field textarea {
   border-radius: 0;
   box-shadow: none;
   border-top: none;
@@ -22,27 +26,27 @@ p-button ::ng-deep button {
   border-left: none;
 }
 
-.field textarea {
+.form-field textarea {
   resize: none;
 }
 
-.field input:enabled:focus,
-.field textarea:enabled:focus {
+.form-field input:enabled:focus,
+.form-field textarea:enabled:focus {
   outline: none;
 }
 
-.field input:not(.ng-dirty.ng-invalid),
-.field textarea:not(.ng-dirty.ng-invalid) {
+.form-field input:not(.ng-dirty.ng-invalid),
+.form-field textarea:not(.ng-dirty.ng-invalid) {
   border-bottom: 1px solid #757575;
 }
 
-.field input:enabled:not(.ng-dirty.ng-invalid):focus,
-.field textarea:enabled:not(.ng-dirty.ng-invalid):focus {
+.form-field input:enabled:not(.ng-dirty.ng-invalid):focus,
+.form-field textarea:enabled:not(.ng-dirty.ng-invalid):focus {
   border-bottom: 1px solid #757575;
 }
 
-.field input:enabled:not(.ng-dirty.ng-invalid):hover,
-.field textarea:enabled:not(.ng-dirty.ng-invalid):hover {
+.form-field input:enabled:not(.ng-dirty.ng-invalid):hover,
+.form-field textarea:enabled:not(.ng-dirty.ng-invalid):hover {
   border-bottom: 1px solid #757575;
 }
 
@@ -54,11 +58,7 @@ p-button ::ng-deep button {
   margin-top: 0.75rem;
 }
 
-.field .errors {
-  margin-left: 0.75rem;
-}
-
-.button .upload-element {
+.upload-element {
   display: none;
 }
 
