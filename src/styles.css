@@ -41,6 +41,23 @@ a {
   top: 0;
 }
 
+/* The following are to enable invalid styling only after the form is submitted (overriding PrimeNG) */
+form:not(.ng-submitted) .p-float-label>.ng-invalid.ng-dirty+label {
+  color: #6c757d;
+}
+
+form:not(.ng-submitted) .p-inputtext.ng-dirty.ng-invalid {
+  border-color: #6c757d;
+}
+
+.ng-submitted .p-float-label>.ng-invalid.ng-dirty+label {
+  color: #e24c4c;
+}
+
+.ng-submitted .p-inputtext.ng-dirty.ng-invalid {
+  border-color: #e24c4c;
+}
+
 .checkbox-group {
   display: flex;
   align-items: center;

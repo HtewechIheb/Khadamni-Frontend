@@ -1,5 +1,8 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,8 +18,6 @@ import { HomeComponent } from './components/home/home.component';
 import { RegisterComponent } from './components/register/register.component';
 import { RegisterCandidateComponent } from './components/register/register-candidate/register-candidate.component';
 import { RegisterCompanyComponent } from './components/register/register-company/register-company.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { JobDescriptionFormComponent } from './components/add-offer/job-description-form/job-description-form.component';
 import { ProfileDetailsFormComponent } from './components/add-offer/profile-details-form/profile-details-form.component';
@@ -24,7 +25,6 @@ import { OfferDetailsComponent } from './components/shared/offer-details/offer-d
 import { OfferPreviewComponent } from './components/add-offer/offer-preview/offer-preview.component';
 import { ViewOfferComponent } from './components/view-offer/view-offer.component';
 import { ViewOffersComponent } from './view-offers/view-offers.component';
-import { AccordionModule } from 'primeng/accordion';
 import { LoginComponent } from './components/login/login.component';
 import { ApplicationDialogComponent } from './components/shared/application-dialog/application-dialog.component';
 
@@ -59,6 +59,7 @@ import { ApplicationDialogComponent } from './components/shared/application-dial
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],

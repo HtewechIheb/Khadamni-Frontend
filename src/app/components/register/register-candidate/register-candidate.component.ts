@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faTag, faVenusMars, faIdCardAlt, faFileInvoice, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register-candidate',
@@ -21,8 +22,8 @@ export class RegisterCandidateComponent implements OnInit {
   public readonly faCalendarAlt = faCalendarAlt;
 
   public form: FormGroup;
-  public submitted: boolean;
-  public loading: boolean;
+  public submitted: boolean = false;
+  public loading: boolean = false;
 
   @ViewChild('uploadPhotoElement') uploadPhotoElement: ElementRef;
   @ViewChild('uploadResumeElement') uploadResumeElement: ElementRef;
@@ -39,13 +40,13 @@ export class RegisterCandidateComponent implements OnInit {
     return this.form.controls;
   }
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       confirmPassword: [''],
       address: ['', Validators.required],
@@ -69,10 +70,30 @@ export class RegisterCandidateComponent implements OnInit {
     this.submitted = true;
     this.loading = true;
 
-    if(!this.form.valid){
-      this.loading = false;
-      return;
-    }
     console.log(this.form);
+
+    if(this.form.valid){
+      const data = {
+        email: this.form.value.email,
+        password: this.form.value.password,
+        firstName: this.form.value.firstName,
+        lastName: this.form.value.lastName,
+        gender: this.form.value.gender,
+        address: this.form.value.address,
+        birthdate: this.form.value.birthdate,
+        resumeFile: this.uploadResumeElement.nativeElement.files[0],
+        photoFile: this.uploadPhotoElement.nativeElement.files[0]
+      }
+
+      this.authService.registerCandidate(data).subscribe(_ => {
+        this.loading = false;
+        window.alert('Success');
+      }, _ => {
+        this.loading = false;
+      });
+    }
+    else {
+      this.loading = false;
+    }
   }
 }

@@ -2,33 +2,40 @@
   <div class="col-10 col-offset-1 md:col-6 md:col-offset-3 xl:col-4 xl:col-offset-4">
     <div class="form-container shadow-3">
       <h1 class="header">Login</h1>
-      <form class="form" #form="ngForm" (ngSubmit)="onSubmit()">
-        <div class="field">
+      <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="form-field">
           <span class="p-float-label">
-            <input inputId="email" type="email" pInputText />
+            <input inputId="email" type="email" pInputText required formControlName="email" [ngClass]="{ 'ng-invalid': submitted && formControls.email.errors, 'ng-dirty': submitted && formControls.email.errors }" />
             <label for="email">
               <fa-icon [icon]="faAt" class="icon-left"></fa-icon>Email
             </label>
           </span>
+          <div *ngIf="submitted && formControls.email.errors" class="errors">
+            <div *ngIf="formControls.email.errors.required">Email is required</div>
+            <div *ngIf="formControls.email.errors.email">Email must be valid</div>
+          </div>
         </div>
-        <div class="field">
+        <div class="form-field">
           <span class="p-float-label">
-            <input inputId="password" type="password" pInputText />
+            <input inputId="password" type="password" pInputText required formControlName="password" [ngClass]="{ 'ng-invalid': submitted && formControls.password.errors, 'ng-dirty': submitted && formControls.password.errors }" />
             <label for="password">
               <fa-icon [icon]="faLock" class="icon-left"></fa-icon>Password
             </label>
           </span>
+          <div *ngIf="submitted && formControls.password.errors" class="errors">
+            <div *ngIf="formControls.password.errors.required">Password is required</div>
+          </div>
         </div>
-        <div class="double-field">
+        <div class="double-form-field">
           <div class="checkbox-group">
-            <p-checkbox [binary]="true" inputId="remember-me"></p-checkbox>
+            <p-checkbox [binary]="true" inputId="remember-me" [formControl]="formControls.rememberMe"></p-checkbox>
             <label for="remember-me" class="checkbox-label">Remember Me</label>
           </div>
           <a href="#">Forgot Password ?</a>
         </div>
-        <div class="button">
-          <p-button label="Login" styleClass="p-button-primary"></p-button>
-        </div>
+
+        <p-button type="submit" label="Login" [loading]="loading" styleClass="p-button-primary submit-button"></p-button>
+
         <div class="footer">
           Don't have an account ? <a href="#">Register Here</a>
         </div>

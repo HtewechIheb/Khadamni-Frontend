@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faInfoCircle, faTag } from '@fortawesome/free-solid-svg-icons';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-register-company',
@@ -18,20 +19,21 @@ export class RegisterCompanyComponent implements OnInit {
   public readonly faInfoCircle = faInfoCircle;
 
   public form: FormGroup;
-  public submitted: boolean;
-  public loading: boolean;
+  public submitted: boolean = false;
+  public loading: boolean = false;
+
   @ViewChild('uploadLogoElement') uploadLogoElement: ElementRef;
 
   get formControls() {
     return this.form.controls;
   }
 
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private authService: AuthService) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
       name: ['', Validators.required],
-      email: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
       password: ['', Validators.required],
       confirmPassword: [''],
       address: ['', Validators.required],
@@ -58,11 +60,30 @@ export class RegisterCompanyComponent implements OnInit {
     this.submitted = true;
     this.loading = true;
 
-    if(!this.form.valid){
-      this.loading = false;
-      return;
-    }
+    console.log(this.uploadLogoElement.nativeElement);
 
-    console.log(this.form);
+    if(this.form.valid){
+      const data = {
+        email: this.form.value.email,
+        password: this.form.value.password,
+        name: this.form.value.name,
+        address: this.form.value.address,
+        description: this.form.value.description,
+        contactNumber: this.form.value.contactNumber,
+        category: this.form.value.category,
+        logoFile: this.uploadLogoElement.nativeElement.files[0]
+      }
+
+      this.authService.registerCompany(data).subscribe(_ => {
+        this.loading = false;
+        window.alert('Success');
+      },
+      _ => {
+        this.loading = false;
+      });
+    }
+    else {
+      this.loading = false;
+    }
   }
 }

@@ -1,6 +1,5 @@
 .form-container {
   background-color: #FFFFFF;
-  text-align: center;
   border: 1px solid rgb(0 0 0 / 14%);
   padding: 1rem;
 }
@@ -10,24 +9,35 @@
 }
 
 .header {
+  text-align: center;
   font-weight: 500;
 }
 
-.field,
-.double-field {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+p-button ::ng-deep button {
+  width: 100%;
+}
+
+p-button ::ng-deep .submit-button {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.form-field,
+.double-form-field {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
 }
 
 @media screen and (max-width: 992px) {
 
-  .field,
-  .double-field {
+  .form-field,
+  .double-form-field {
     font-size: small;
   }
 }
 
-.double-field {
+.double-form-field {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,33 +54,38 @@
   }
 }
 
-.field input {
+.form-field input {
   width: 100%;
 }
 
-.field input {
+.form-field input {
   border-radius: 0;
   box-shadow: none;
-  border: none;
-  border-bottom: 1px solid #757575;
+  border-top: none;
+  border-right: none;
+  border-left: none;
 }
 
-.field input:enabled:focus {
-  box-shadow: none;
-  border: none;
-  border-bottom: 1px solid #757575;
+.form-field input:enabled:focus {
   outline: none;
 }
 
-.field input:enabled:hover {
-  border-color: #757575;
+.form-field input:not(.ng-dirty.ng-invalid) {
+  border-bottom: 1px solid #757575;
 }
 
-.button {
-  margin-top: 3rem;
-  margin-bottom: 0.5rem;
+.form-field input:enabled:not(.ng-dirty.ng-invalid):hover {
+  border-bottom: 1px solid #757575;
 }
 
-.button p-button ::ng-deep button {
-  width: 100%;
+.form-field input:enabled:not(.ng-dirty.ng-invalid):hover {
+  border-bottom: 1px solid #757575;
+}
+
+.errors {
+  color: #e24c4c;
+}
+
+.errors>div {
+  margin-top: 0.75rem;
 }

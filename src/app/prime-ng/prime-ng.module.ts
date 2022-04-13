@@ -16,6 +16,7 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { DropdownModule } from 'primeng/dropdown';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { AccordionModule } from 'primeng/accordion';
+import { ToastModule } from 'primeng/toast';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { AccordionModule } from 'primeng/accordion';
     InputNumberModule,
     DropdownModule,
     InputSwitchModule,
-    AccordionModule
+    AccordionModule,
+    ToastModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -55,7 +57,8 @@ import { AccordionModule } from 'primeng/accordion';
     InputNumberModule,
     DropdownModule,
     InputSwitchModule,
-    AccordionModule
+    AccordionModule,
+    ToastModule
   ],
 })
 export class PrimeNGModule {}

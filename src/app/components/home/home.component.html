@@ -12,7 +12,6 @@
       </div>
     </div>
 
-<<<<<<< HEAD
     <div class="section">
       <h1 class="section-header">Trending Companies</h1>
       <p-carousel [styleClass]="'companies-carousel'" [value]="companies" [numScroll]="1" [numVisible]="6"
@@ -26,23 +25,6 @@
     <div class="grid section">
       <div class="col-12 md:col-10 md:col-offset-1">
         <h1 class="section-header">Recent Offers</h1>
-=======
-    <div class="grid section">
-      <div class="col-12">
-        <div class="section-header">Trending Companies</div>
-        <p-carousel [styleClass]="'companies-carousel'" [value]="companies" [numScroll]="1" [numVisible]="6"
-          [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
-          <ng-template let-company pTemplate="item">
-            <app-company-thumbnail [name]="'Company'" [offers]="150"></app-company-thumbnail>
-          </ng-template>
-        </p-carousel>
-      </div>
-    </div>
-
-    <div class="grid section">
-      <div class="col-12 md:col-10 md:col-offset-1 lg:col-8 lg:col-offset-2">
-        <div class="section-header">Recent Offers</div>
->>>>>>> ApplicationDialogDesign
         <app-offers-list [items]="[]"></app-offers-list>
         <p-paginator [rows]="10" [totalRecords]="100" [showPageLinks]="true" [showJumpToPageDropdown]="true"></p-paginator>
       </div>
