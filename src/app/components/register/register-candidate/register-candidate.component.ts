@@ -1,7 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faTag, faVenusMars, faIdCardAlt, faFileInvoice, faCalendarAlt } from '@fortawesome/free-solid-svg-icons';
 import { AuthService } from 'src/app/services/auth.service';
+import { ToastrService } from 'src/app/services/toastr.service';
 
 @Component({
   selector: 'app-register-candidate',
@@ -40,22 +42,22 @@ export class RegisterCandidateComponent implements OnInit {
     return this.form.controls;
   }
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService) {}
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private toastrService: ToastrService, private router: Router) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
-      confirmPassword: [''],
-      address: ['', Validators.required],
-      birthdate: ['', Validators.required],
-      gender: ['', Validators.required],
-      tos: ['', [Validators.required, Validators.pattern(/true/)]],
-      resumeFile: ['', Validators.required],
-      contactNumber: [''],
-      photoFile: ['']
+      firstName: [null, Validators.required],
+      lastName: [null, Validators.required],
+      email: [null, [Validators.required, Validators.email]],
+      password: [null, Validators.required],
+      confirmPassword: [null],
+      address: [null, Validators.required],
+      birthdate: [null, Validators.required],
+      gender: [null, Validators.required],
+      tos: [null, [Validators.required, Validators.pattern(/true/)]],
+      resumeFile: [null, Validators.required],
+      contactNumber: [null],
+      photoFile: [null]
     }, { validators: this.passwordsMatch });
   }
 
@@ -87,9 +89,11 @@ export class RegisterCandidateComponent implements OnInit {
 
       this.authService.registerCandidate(data).subscribe(_ => {
         this.loading = false;
-        window.alert('Success');
+        this.toastrService.showSuccessToast('Registeration Successful', 'Welcome To Khadamni!');
+        this.router.navigate(['']);
       }, _ => {
         this.loading = false;
+        this.toastrService.showErrorToast('Registeration Failed', 'Account Creation Failed! Please Try Again.');
       });
     }
     else {

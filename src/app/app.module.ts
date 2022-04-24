@@ -2,7 +2,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { JwtModule } from '@auth0/angular-jwt';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,9 @@ import { ViewOfferComponent } from './components/view-offer/view-offer.component
 import { ViewOffersComponent } from './view-offers/view-offers.component';
 import { LoginComponent } from './components/login/login.component';
 import { ApplicationDialogComponent } from './components/shared/application-dialog/application-dialog.component';
+import { UnauthorizedInterceptor } from './services/unauthorized-interceptor.service';
+import { MessageService } from 'primeng/api';
+import { ToastrService } from './services/toastr.service';
 
 @NgModule({
   declarations: [
@@ -59,9 +63,23 @@ import { ApplicationDialogComponent } from './components/shared/application-dial
     FormsModule,
     ReactiveFormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: () => localStorage.getItem('token'),
+        allowedDomains: ['localhost:8080'],
+        disallowedRoutes: ['http://localhost:8080/api/auth/login', 'http://localhost:8080/api/auth/register']
+      }
+    })
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: UnauthorizedInterceptor,
+      multi: true
+    },
+    MessageService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

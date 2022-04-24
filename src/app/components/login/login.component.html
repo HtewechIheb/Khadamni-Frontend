@@ -37,7 +37,7 @@
         <p-button type="submit" label="Login" [loading]="loading" styleClass="p-button-primary submit-button"></p-button>
 
         <div class="footer">
-          Don't have an account ? <a href="#">Register Here</a>
+          Don't have an account ? <a [routerLink]="['/auth', 'register']">Register Here</a>
         </div>
       </form>
     </div>

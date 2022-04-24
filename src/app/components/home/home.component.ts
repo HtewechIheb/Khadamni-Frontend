@@ -1,21 +1,18 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { PrimeNGConfig } from 'primeng/api';
+import { AuthService } from 'src/app/services/auth.service';
+import { User } from 'src/core/models/user';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   companies: Array<any>;
   responsiveOptions: Array<any>;
-  mobileNavigator: boolean;
-  @HostListener('window:resize', ['$event']) onResize(event: Event){
-    this.mobileNavigator = visualViewport.width < 576;
-  }
 
-  constructor(private primeNgConfig: PrimeNGConfig) {
-    this.mobileNavigator = visualViewport.width < 576;
+  constructor(private authService: AuthService) {
     this.responsiveOptions = [
       {
         breakpoint: '1024px',
@@ -33,9 +30,6 @@ export class HomeComponent implements OnInit {
         numScroll: 1,
       },
     ];
-  }
-
-  ngOnInit(): void {
     this.companies = [{}, {}, {}, {}, {}, {}, {}, {}];
   }
 }

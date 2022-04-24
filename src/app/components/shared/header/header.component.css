@@ -35,6 +35,7 @@
 }
 
 .navbar .links li a {
+  cursor: pointer;
   padding: 1rem;
   display: block;
   color: #F4F4F4;

@@ -1,7 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { faBuilding, faAt, faLock, faPhoneAlt, faMapMarkedAlt, faUpload, faInfoCircle, faTag } from '@fortawesome/free-solid-svg-icons';
 import { AuthService } from 'src/app/services/auth.service';
+import { ToastrService } from 'src/app/services/toastr.service';
 
 @Component({
   selector: 'app-register-company',
@@ -28,20 +30,20 @@ export class RegisterCompanyComponent implements OnInit {
     return this.form.controls;
   }
 
-  constructor(private formBuilder: FormBuilder, private authService: AuthService) {}
+  constructor(private formBuilder: FormBuilder, private authService: AuthService, private toastrService: ToastrService, private router: Router) {}
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required],
-      confirmPassword: [''],
-      address: ['', Validators.required],
-      description: ['', Validators.required],
-      tos: ['', [Validators.required, Validators.pattern(/true/)]],
-      contactNumber: [''],
-      category: [''],
-      logoFile: ['']
+      name: [null, Validators.required],
+      email: [null, [Validators.required, Validators.email]],
+      password: [null, Validators.required],
+      confirmPassword: [null],
+      address: [null, Validators.required],
+      description: [null, Validators.required],
+      tos: [null, [Validators.required, Validators.pattern(/true/)]],
+      contactNumber: [null],
+      category: [null],
+      logoFile: [null]
     }, { validators: this.passwordsMatch });
   }
 
@@ -76,10 +78,11 @@ export class RegisterCompanyComponent implements OnInit {
 
       this.authService.registerCompany(data).subscribe(_ => {
         this.loading = false;
-        window.alert('Success');
-      },
-      _ => {
+        this.toastrService.showSuccessToast('Registeration Successful', 'Welcome To Khadamni!');
+        this.router.navigate(['']);
+      }, _ => {
         this.loading = false;
+        this.toastrService.showErrorToast('Registeration Failed', 'Account Creation Failed! Please Try Again.');
       });
     }
     else {
