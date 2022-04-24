@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProfileDetailsFormComponent } from './profile-details-form.component';
+import { AccessDeniedComponent } from './access-denied.component';
 
-describe('ProfileDetailsFormComponent', () => {
-  let component: ProfileDetailsFormComponent;
-  let fixture: ComponentFixture<ProfileDetailsFormComponent>;
+describe('AccessDeniedComponent', () => {
+  let component: AccessDeniedComponent;
+  let fixture: ComponentFixture<AccessDeniedComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfileDetailsFormComponent ]
+      declarations: [ AccessDeniedComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ProfileDetailsFormComponent);
+    fixture = TestBed.createComponent(AccessDeniedComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

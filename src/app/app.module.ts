@@ -20,15 +20,14 @@ import { RegisterComponent } from './components/register/register.component';
 import { RegisterCandidateComponent } from './components/register/register-candidate/register-candidate.component';
 import { RegisterCompanyComponent } from './components/register/register-company/register-company.component';
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
-import { JobDescriptionFormComponent } from './components/add-offer/job-description-form/job-description-form.component';
-import { ProfileDetailsFormComponent } from './components/add-offer/profile-details-form/profile-details-form.component';
 import { OfferDetailsComponent } from './components/shared/offer-details/offer-details.component';
-import { OfferPreviewComponent } from './components/add-offer/offer-preview/offer-preview.component';
 import { ViewOfferComponent } from './components/view-offer/view-offer.component';
 import { ViewOffersComponent } from './view-offers/view-offers.component';
 import { LoginComponent } from './components/login/login.component';
 import { ApplicationDialogComponent } from './components/shared/application-dialog/application-dialog.component';
 import { UnauthorizedInterceptor } from './services/unauthorized-interceptor.service';
+import { CompanyDashboardComponent } from './components/company-dashboard/company-dashboard.component';
+import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
 import { MessageService } from 'primeng/api';
 import { ToastrService } from './services/toastr.service';
 
@@ -46,14 +45,13 @@ import { ToastrService } from './services/toastr.service';
     RegisterCandidateComponent,
     RegisterCompanyComponent,
     AddOfferComponent,
-    JobDescriptionFormComponent,
-    ProfileDetailsFormComponent,
     OfferDetailsComponent,
-    OfferPreviewComponent,
     ViewOfferComponent,
     ViewOffersComponent,
     LoginComponent,
     ApplicationDialogComponent,
+    CompanyDashboardComponent,
+    AccessDeniedComponent,
   ],
   imports: [
     BrowserModule,

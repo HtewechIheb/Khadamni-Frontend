@@ -6,7 +6,7 @@
 body {
   position: relative;
   margin: 0;
-  background-color: #FAFAFA;
+  background-color: #FDFDFD;
   color: #495057;
 }
 
@@ -42,20 +42,38 @@ a {
 }
 
 /* The following are to enable invalid styling only after the form is submitted (overriding PrimeNG) */
+.ng-submitted p-dropdown.ng-dirty.ng-invalid .p-dropdown .p-dropdown-trigger,
 form:not(.ng-submitted) .p-float-label>.ng-invalid.ng-dirty+label {
   color: #6c757d;
 }
 
+form:not(.ng-submitted) p-dropdown.ng-dirty.ng-invalid .p-dropdown,
 form:not(.ng-submitted) .p-inputtext.ng-dirty.ng-invalid {
   border-color: #6c757d;
 }
 
+.ng-submitted p-dropdown.ng-dirty.ng-invalid .p-dropdown .p-dropdown-trigger,
 .ng-submitted .p-float-label>.ng-invalid.ng-dirty+label {
   color: #e24c4c;
 }
 
+.ng-submitted p-dropdown.ng-dirty.ng-invalid .p-dropdown,
 .ng-submitted .p-inputtext.ng-dirty.ng-invalid {
   border-color: #e24c4c;
+}
+
+.p-toast .p-toast-message.p-toast-message-success,
+.p-toast .p-toast-message.p-toast-message-error {
+  background: #FFFFFF;
+}
+
+.p-toast .p-toast-message .p-toast-message-content .p-toast-message-text {
+  color: #495057;
+}
+
+.p-toast .p-toast-message.p-toast-message-success .p-toast-icon-close,
+.p-toast .p-toast-message.p-toast-message-error .p-toast-icon-close {
+  color: #495057;
 }
 
 .checkbox-group {

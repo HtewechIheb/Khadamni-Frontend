@@ -1,9 +1,133 @@
 <div class="grid">
   <div class="col-10 col-offset-1 md:col-8 md:col-offset-2 xl:col-6 xl:col-offset-3">
-    <div class="steps-container">
-      <p-steps [model]="steps"></p-steps>
+    <div class="form-container shadow-3">
+      <h1 class="header">Add Offer</h1>
+      <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="grid">
+          <div class="form-field col-12">
+            <span class="p-float-label">
+              <input inputId="title" type="text" pInputText required formControlName="title" [ngClass]="{ 'ng-invalid': submitted && formControls.title.errors, 'ng-dirty': submitted && formControls.title.errors }" />
+              <label for="title">
+                <fa-icon [icon]="faTag" class="icon-left"></fa-icon>Title
+              </label>
+            </span>
+            <div *ngIf="submitted && formControls.title.errors" class="errors">
+              <div *ngIf="formControls.title.errors.required">Title is required</div>
+            </div>
+          </div>
+          <div class="form-field col-12 md:col-6">
+            <span class="p-float-label">
+              <p-dropdown inputId="industry" [autoDisplayFirst]="false" [options]="industries" optionLabel="name" optionValue="name" formControlName="industry" [ngClass]="{ 'ng-invalid': submitted && formControls.industry.errors, 'ng-dirty': submitted && formControls.industry.errors }"></p-dropdown>
+              <label for="industry">
+                <fa-icon [icon]="faIndustry" class="icon-left"></fa-icon>Industry
+              </label>
+            </span>
+            <div *ngIf="submitted && formControls.industry.errors" class="errors">
+              <div *ngIf="formControls.industry.errors.required">Industry is required</div>
+            </div>
+          </div>
+          <div class="form-field col-12 md:col-6">
+            <span class="p-float-label">
+              <p-dropdown inputId="employmenttype" [autoDisplayFirst]="false" [options]="employmentTypes" optionLabel="name" optionValue="name" formControlName="type" [ngClass]="{ 'ng-invalid': submitted && formControls.type.errors, 'ng-dirty': submitted && formControls.type.errors }">
+              </p-dropdown>
+              <label for="employmenttype">
+                <fa-icon [icon]="faFileSignature" class="icon-left"></fa-icon>Contract Type
+              </label>
+            </span>
+            <div *ngIf="submitted && formControls.type.errors" class="errors">
+              <div *ngIf="formControls.type.errors.required">Contract Type is required</div>
+            </div>
+          </div>
+          <div class="form-field col-12 md:col-6">
+            <span class="p-float-label">
+              <p-inputNumber inputId="openspots" mode="decimal" [min]="1" [max]="100" formControlName="spots"></p-inputNumber>
+              <label for="openspots">
+                <fa-icon [icon]="faUserFriends" class="icon-left"></fa-icon>Open Spots
+              </label>
+            </span>
+          </div>
+          <div class="form-field col-12 md:col-6">
+            <span class="p-float-label">
+              <p-inputNumber mode="currency" currency="USD" locale="en-US" formControlName="salary"></p-inputNumber>
+              <label for="openspots">
+                <fa-icon [icon]="faSackDollar" class="icon-left"></fa-icon>Salary
+              </label>
+            </span>
+          </div>
+          <div class="form-field col-12">
+            <span class="p-float-label">
+              <textarea id="description" rows="10" pInputTextarea required formControlName="description" [ngClass]="{ 'ng-invalid': submitted && formControls.description.errors, 'ng-dirty': submitted && formControls.description.errors }"></textarea>
+              <label for="description">
+                <fa-icon [icon]="faInfoCircle" class="icon-left"></fa-icon>Description
+              </label>
+            </span>
+            <div *ngIf="submitted && formControls.description.errors" class="errors">
+              <div *ngIf="formControls.description.errors.required">Description is required</div>
+            </div>
+          </div>
+          <div class="form-field col-12">
+            <span class="static-float-label">
+              <div class="skills-selector">
+                <span *ngFor="let skill of skills; let i = index;" class="p-input-icon-right skill-badge">
+                  <i (click)="removeSkill(i)" class="pi pi-times-circle"></i>
+                  <input type="text" pInputText [value]="skill" readonly />
+                </span>
+                <span *ngIf="skillsCount < maxSkillsCount" class="p-input-icon-right skill-adder">
+                  <i (click)="addSkill(skillInput)" class="pi pi-plus-circle"></i>
+                  <input type="text" pInputText placeholder="Add Skill" name="new-skill" #skillInput />
+                </span>
+              </div>
+              <label>
+                <fa-icon [icon]="faFistRaised" class="icon-left"></fa-icon>Skills ({{ maxSkillsCount - skillsCount }}
+                remaining)
+              </label>
+            </span>
+            <div *ngIf="submitted && skills.length === 0" class="errors">
+              <div>Description is required</div>
+            </div>
+          </div>
+          <div class="form-field col-12 md:col-6">
+            <span class="p-float-label">
+              <p-dropdown inputId="required-degree" [autoDisplayFirst]="false" [options]="degrees" optionLabel="name" optionValue="name" formControlName="degree"></p-dropdown>
+              <label for="required-degree">
+                <fa-icon [icon]="faGraduationCap" class="icon-left"></fa-icon>Required Degree
+              </label>
+            </span>
+          </div>
+          <div class="form-field align-self-center col-12 md:col-6">
+            <span class="radio-label">
+              <fa-icon [icon]="faVenusMars" class="icon-left"></fa-icon>Gender:
+            </span>
+            <p-radioButton name="gender" label="Male" value="male" formControlName="gender" [ngClass]="{ 'ng-invalid': submitted && formControls.gender.errors, 'ng-dirty': submitted && formControls.gender.errors }"></p-radioButton>
+            <p-radioButton name="gender" label="Female" value="female" formControlName="gender" [ngClass]="{ 'ng-invalid': submitted && formControls.gender.errors, 'ng-dirty': submitted && formControls.gender.errors }"></p-radioButton>
+            <div *ngIf="submitted && formControls.gender.errors" class="errors">
+              <div *ngIf="formControls.gender.errors.required">Gender is required</div>
+            </div>
+          </div>
+          <div class="form-field col-12 md:col-6">
+            <span class="p-float-label">
+              <p-inputNumber inputId="minimum-experience" mode="decimal" [min]="1" [max]="15" required formControlName="minimumExperience" [ngClass]="{ 'ng-invalid': submitted && formControls.minimumExperience.errors, 'ng-dirty': submitted && formControls.minimumExperience.errors }"></p-inputNumber>
+              <label for="minimum-experience">
+                <fa-icon [icon]="faBusinessTime" class="icon-left"></fa-icon>Minimum Experience
+              </label>
+            </span>
+            <div *ngIf="submitted && formControls.minimumExperience.errors" class="errors">
+              <div *ngIf="formControls.minimumExperience.errors.required">Minimum Experience is required</div>
+            </div>
+          </div>
+          <div class="form-field col-12 md:col-6">
+            <span class="p-float-label">
+              <p-inputNumber inputId="recommended-experience" mode="decimal" [min]="1" [max]="15" formControlName="recommendedExperience"></p-inputNumber>
+              <label for="recommended-experience">
+                <fa-icon [icon]="faBusinessTime" class="icon-left"></fa-icon>Recommended Experience
+              </label>
+            </span>
+          </div>
+          <div class="col-12">
+            <p-button type="submit" label="Add Offer" styleClass="p-button-primary"></p-button>
+          </div>
+        </div>
+      </form>
     </div>
-    <!-- <app-job-description-form></app-job-description-form> -->
-    <app-profile-details-form></app-profile-details-form>
-    <!-- <app-offer-preview></app-offer-preview> -->
+  </div>
 </div>

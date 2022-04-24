@@ -1,0 +1,53 @@
+.toolbar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.offer-badge {
+  border-radius: 2px;
+  padding: 0.25em 0.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: .3px;
+}
+
+.offer-badge.status-open {
+  background: #C8E6C9;
+  color: #256029;
+}
+
+.offer-badge.status-closed {
+  background: #FFCDD2;
+  color: #c63737;
+}
+
+p-table ::ng-deep .p-datatable {
+  border: 1px solid #dee2e6;
+  border-width: 0 1px 0 1px;
+}
+
+p-table ::ng-deep .p-datatable-header>h4 {
+  margin: 0;
+}
+
+p-table ::ng-deep .p-datatable-tbody .buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@media screen and (max-width: 960px) {
+  p-table ::ng-deep .p-datatable-tbody .buttons span {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}
+
+p-table ::ng-deep .p-datatable-tbody .buttons p-button:first-child ::ng-deep button {
+  margin-right: 0.5rem;
+}

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MenubarModule } from 'primeng/menubar';
+import { MenuModule } from 'primeng/menu';
 import { SharedModule } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
@@ -17,12 +17,14 @@ import { DropdownModule } from 'primeng/dropdown';
 import { InputSwitchModule } from 'primeng/inputswitch';
 import { AccordionModule } from 'primeng/accordion';
 import { ToastModule } from 'primeng/toast';
+import { TableModule } from 'primeng/table';
+import { SliderModule } from 'primeng/slider';
 
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
-    MenubarModule,
+    MenuModule,
     SharedModule,
     ButtonModule,
     CardModule,
@@ -38,11 +40,13 @@ import { ToastModule } from 'primeng/toast';
     DropdownModule,
     InputSwitchModule,
     AccordionModule,
-    ToastModule
+    ToastModule,
+    TableModule,
+    SliderModule
   ],
   exports: [
     BrowserAnimationsModule,
-    MenubarModule,
+    MenuModule,
     SharedModule,
     ButtonModule,
     CardModule,
@@ -58,7 +62,9 @@ import { ToastModule } from 'primeng/toast';
     DropdownModule,
     InputSwitchModule,
     AccordionModule,
-    ToastModule
+    ToastModule,
+    TableModule,
+    SliderModule
   ],
 })
 export class PrimeNGModule {}

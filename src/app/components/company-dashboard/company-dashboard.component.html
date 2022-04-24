@@ -1,0 +1,61 @@
+<div class="grid">
+  <div class="col-10 col-offset-1">
+    <div class="toolbar">
+      <p-button styleClass="p-button-sm">
+        <ng-template pTemplate="content">
+          <fa-icon [icon]="faPlus" class="icon-left"></fa-icon>Add Offer
+        </ng-template>
+      </p-button>
+    </div>
+
+    <p-table [value]="offers" [rows]="10" [paginator]="true" [globalFilterFields]="['title']" currentPageReportTemplate="Showing {first} to {last} of {totalRecords} offers" [showCurrentPageReport]="true" responsiveLayout="stack">
+      <ng-template pTemplate="caption" class="table-caption">
+        <h4>Posted Offers</h4>
+      </ng-template>
+
+      <ng-template pTemplate="header">
+        <tr>
+          <th pSortableColumn="title">Title <p-sortIcon field="title"></p-sortIcon></th>
+          <th pSortableColumn="applications">Applications <p-sortIcon field="applications"></p-sortIcon></th>
+          <th pSortableColumn="status">Status <p-sortIcon field="status"></p-sortIcon></th>
+          <th></th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-offer>
+        <tr>
+          <td><span class="p-column-title">Title</span>{{ offer.title }}</td>
+          <td><span class="p-column-title">Applications</span>{{ offer.applications }} Applications</td>
+          <td><span class="p-column-title">Status</span><span [class]="'offer-badge status-' + offer.status.toLowerCase()">{{ offer.status }}</span></td>
+          <td class="buttons">
+            <span>
+              <p-button label="Login" styleClass="p-button-rounded p-button-primary p-button-text">
+                <ng-template pTemplate="content">
+                  <fa-icon [icon]="faMagnifyingGlassPlus"></fa-icon>
+                </ng-template>
+              </p-button>
+              <p-button label="Login" styleClass="p-button-rounded p-button-warning p-button-text">
+                <ng-template pTemplate="content">
+                  <fa-icon [icon]="faPen"></fa-icon>
+                </ng-template>
+              </p-button>
+              <p-button label="Login" styleClass="p-button-rounded p-button-danger p-button-text">
+                <ng-template pTemplate="content">
+                  <fa-icon [icon]="faTrash"></fa-icon>
+                </ng-template>
+              </p-button>
+            </span>
+          </td>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="emptymessage">
+         <tr>
+            <td [attr.colspan]="4">
+              You haven't posted any offers.
+            </td>
+          </tr>
+      </ng-template>
+    </p-table>
+  </div>
+</div>
