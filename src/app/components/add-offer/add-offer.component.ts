@@ -66,9 +66,9 @@ export class AddOfferComponent implements OnInit {
       industry: [null, Validators.required],
       type: [null, Validators.required],
       description: [null, Validators.required],
-      gender: [null, Validators.required],
       minimumExperience: [null, Validators.required],
       recommendedExperience: [null],
+      gender: [null],
       spots: [null],
       salary: [null],
       degree: [null]
@@ -112,7 +112,7 @@ export class AddOfferComponent implements OnInit {
       this.offersService.addOffer(data).subscribe(_ => {
         this.loading = false;
         this.toastrService.showSuccessToast('Creation Successful', 'Offer Was Successfully Created!');
-        this.router.navigate(['']);
+        this.router.navigate(['dashboard']);
       }, _ => {
         this.loading = false;
         this.toastrService.showErrorToast('Creation Failed', 'Could Not Create Offer! Please Try Again.');

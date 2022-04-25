@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faMagnifyingGlassPlus, faPen, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { ConfirmationService } from 'primeng/api';
 import { AuthService } from 'src/app/services/auth.service';
 import { OffersService } from 'src/app/services/offers.service';
 import { ToastrService } from 'src/app/services/toastr.service';
@@ -17,7 +18,7 @@ export class CompanyDashboardComponent implements OnInit {
 
   public offers = [];
 
-  constructor(private offersService: OffersService, private authService: AuthService, private toastrService: ToastrService) { }
+  constructor(private offersService: OffersService, private authService: AuthService, private toastrService: ToastrService, private confirmationService: ConfirmationService) { }
 
   ngOnInit(): void {
     this.offersService.getOffersByCompany(this.authService.userValue.id).subscribe(offers => {
@@ -25,6 +26,15 @@ export class CompanyDashboardComponent implements OnInit {
     },
     _ => {
       this.toastrService.showErrorToast('Loading Failed!', 'Could Not Load Offers.');
+    });
+  }
+
+  deleteOfferPopup(id: number): void {
+    this.confirmationService.confirm({
+      message: 'Are you sure that you want to delete this offer ?',
+      accept: () => {
+        this.deleteOffer(id);
+      }
     });
   }
 

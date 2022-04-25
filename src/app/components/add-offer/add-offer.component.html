@@ -95,11 +95,8 @@
             <span class="radio-label">
               <fa-icon [icon]="faVenusMars" class="icon-left"></fa-icon>Gender:
             </span>
-            <p-radioButton name="gender" label="Male" value="male" formControlName="gender" [ngClass]="{ 'ng-invalid': submitted && formControls.gender.errors, 'ng-dirty': submitted && formControls.gender.errors }"></p-radioButton>
-            <p-radioButton name="gender" label="Female" value="female" formControlName="gender" [ngClass]="{ 'ng-invalid': submitted && formControls.gender.errors, 'ng-dirty': submitted && formControls.gender.errors }"></p-radioButton>
-            <div *ngIf="submitted && formControls.gender.errors" class="errors">
-              <div *ngIf="formControls.gender.errors.required">Gender is required</div>
-            </div>
+            <p-radioButton name="gender" label="Male" value="male" formControlName="gender"></p-radioButton>
+            <p-radioButton name="gender" label="Female" value="female" formControlName="gender"></p-radioButton>
           </div>
           <div class="form-field col-12 md:col-6">
             <span class="p-float-label">

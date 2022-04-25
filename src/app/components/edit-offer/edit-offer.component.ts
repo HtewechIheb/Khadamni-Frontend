@@ -97,7 +97,7 @@ export class EditOfferComponent implements OnInit {
       this.skills = this.offer.skills;
     },
     _ => {
-      this.router.navigate(['']);
+      this.router.navigate(['dashboard']);
       this.toastrService.showErrorToast('Loading Failed', 'Could Not Load Offer! Please Try Again.');
     });
   }

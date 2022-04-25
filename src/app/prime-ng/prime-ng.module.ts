@@ -19,7 +19,7 @@ import { AccordionModule } from 'primeng/accordion';
 import { ToastModule } from 'primeng/toast';
 import { TableModule } from 'primeng/table';
 import { SliderModule } from 'primeng/slider';
-
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 @NgModule({
   imports: [
@@ -42,7 +42,8 @@ import { SliderModule } from 'primeng/slider';
     AccordionModule,
     ToastModule,
     TableModule,
-    SliderModule
+    SliderModule,
+    ConfirmDialogModule
   ],
   exports: [
     BrowserAnimationsModule,
@@ -64,7 +65,8 @@ import { SliderModule } from 'primeng/slider';
     AccordionModule,
     ToastModule,
     TableModule,
-    SliderModule
+    SliderModule,
+    ConfirmDialogModule
   ],
 })
 export class PrimeNGModule {}

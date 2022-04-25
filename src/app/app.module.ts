@@ -28,7 +28,7 @@ import { ApplicationDialogComponent } from './components/shared/application-dial
 import { UnauthorizedInterceptor } from './services/unauthorized-interceptor.service';
 import { CompanyDashboardComponent } from './components/company-dashboard/company-dashboard.component';
 import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
-import { MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 import { ToastrService } from './services/toastr.service';
 import { EditOfferComponent } from './components/edit-offer/edit-offer.component';
 
@@ -78,7 +78,8 @@ import { EditOfferComponent } from './components/edit-offer/edit-offer.component
       useClass: UnauthorizedInterceptor,
       multi: true
     },
-    MessageService
+    MessageService,
+    ConfirmationService
   ],
   bootstrap: [AppComponent],
 })

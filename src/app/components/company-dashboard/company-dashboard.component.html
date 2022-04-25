@@ -39,7 +39,7 @@
                   <fa-icon [icon]="faPen"></fa-icon>
                 </ng-template>
               </p-button>
-              <p-button label="Login" styleClass="p-button-rounded p-button-danger p-button-text" (click)="deleteOffer(offer.id)">
+              <p-button label="Login" styleClass="p-button-rounded p-button-danger p-button-text" (click)="deleteOfferPopup(offer.id)">
                 <ng-template pTemplate="content">
                   <fa-icon [icon]="faTrash"></fa-icon>
                 </ng-template>
@@ -59,3 +59,5 @@
     </p-table>
   </div>
 </div>
+
+<p-confirmDialog header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
