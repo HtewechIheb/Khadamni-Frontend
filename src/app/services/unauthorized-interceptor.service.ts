@@ -17,14 +17,16 @@ export class UnauthorizedInterceptor implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     return next.handle(req).pipe(
       catchError(error => {
-        if(error.status == HttpStatusCode.Unauthorized){
+        if(error.status === HttpStatusCode.Unauthorized){
           return this.authService.refreshToken(this.authService.getToken()).pipe(
             switchMap(response => {
               return next.handle(this.setAuthorizationHeader(req, response.token));
             }),
             catchError(error => {
-              this.authService.logout();
-              return throwError(error);
+              if(error.status === HttpStatusCode.Unauthorized){
+                this.authService.logout();
+                return throwError(error);
+              }
             })
           );
         }
