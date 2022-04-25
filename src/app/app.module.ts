@@ -30,6 +30,7 @@ import { CompanyDashboardComponent } from './components/company-dashboard/compan
 import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
 import { MessageService } from 'primeng/api';
 import { ToastrService } from './services/toastr.service';
+import { EditOfferComponent } from './components/edit-offer/edit-offer.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { ToastrService } from './services/toastr.service';
     ApplicationDialogComponent,
     CompanyDashboardComponent,
     AccessDeniedComponent,
+    EditOfferComponent,
   ],
   imports: [
     BrowserModule,

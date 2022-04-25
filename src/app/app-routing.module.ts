@@ -4,6 +4,7 @@ import { CompanyGuard } from './auth/company.guard';
 import { AccessDeniedComponent } from './components/access-denied/access-denied.component';
 import { AddOfferComponent } from './components/add-offer/add-offer.component';
 import { CompanyDashboardComponent } from './components/company-dashboard/company-dashboard.component';
+import { EditOfferComponent } from './components/edit-offer/edit-offer.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -18,6 +19,7 @@ const routes: Routes = [
     ]
   },
   { path: 'offers/new', component: AddOfferComponent, canActivate: [CompanyGuard] },
+  { path: 'offers/:id/edit', component: EditOfferComponent, canActivate: [CompanyGuard] },
   { path: 'dashboard', component: CompanyDashboardComponent, canActivate: [CompanyGuard] }
 ];
 

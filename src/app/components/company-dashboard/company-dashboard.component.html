@@ -1,7 +1,7 @@
 <div class="grid">
   <div class="col-10 col-offset-1">
     <div class="toolbar">
-      <p-button styleClass="p-button-sm">
+      <p-button styleClass="p-button-sm" [routerLink]="['/offers', 'new']">
         <ng-template pTemplate="content">
           <fa-icon [icon]="faPlus" class="icon-left"></fa-icon>Add Offer
         </ng-template>
@@ -34,12 +34,12 @@
                   <fa-icon [icon]="faMagnifyingGlassPlus"></fa-icon>
                 </ng-template>
               </p-button>
-              <p-button label="Login" styleClass="p-button-rounded p-button-warning p-button-text">
+              <p-button label="Login" styleClass="p-button-rounded p-button-warning p-button-text" [routerLink]="['/offers', offer.id, 'edit']">
                 <ng-template pTemplate="content">
                   <fa-icon [icon]="faPen"></fa-icon>
                 </ng-template>
               </p-button>
-              <p-button label="Login" styleClass="p-button-rounded p-button-danger p-button-text">
+              <p-button label="Login" styleClass="p-button-rounded p-button-danger p-button-text" (click)="deleteOffer(offer.id)">
                 <ng-template pTemplate="content">
                   <fa-icon [icon]="faTrash"></fa-icon>
                 </ng-template>

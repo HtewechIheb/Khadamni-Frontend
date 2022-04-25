@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faMagnifyingGlassPlus, faPen, faPlus, faTrash } from '@fortawesome/free-solid-svg-icons';
+import { AuthService } from 'src/app/services/auth.service';
+import { OffersService } from 'src/app/services/offers.service';
+import { ToastrService } from 'src/app/services/toastr.service';
 
 @Component({
   selector: 'app-company-dashboard',
@@ -11,24 +14,27 @@ export class CompanyDashboardComponent implements OnInit {
   public readonly faTrash = faTrash;
   public readonly faPlus = faPlus;
   public readonly faMagnifyingGlassPlus = faMagnifyingGlassPlus;
-  public readonly offers = [
-    { title: 'Angular / .NET Developer', applications: 10, status: 'open' },
-    { title: 'Angular / JEE Developer', applications: 7, status: 'open' },
-    { title: 'Product Manager', applications: 3, status: 'open' },
-    { title: 'Scrum Master', applications: 15, status: 'closed' },
-    { title: 'Cloud Engineer', applications: 12, status: 'closed' },
-    { title: 'DevOps Engineer', applications: 10, status: 'open' },
-    { title: 'Scrum Master', applications: 15, status: 'closed' },
-    { title: 'DevOps Engineer', applications: 10, status: 'open' },
-    { title: 'DevOps Engineer', applications: 10, status: 'open' },
-    { title: 'Angular / .NET Developer', applications: 10, status: 'open' },
-    { title: 'Angular / .NET Developer', applications: 10, status: 'open' },
-    { title: 'Angular / .NET Developer', applications: 10, status: 'open' },
-  ];
 
-  constructor() { }
+  public offers = [];
+
+  constructor(private offersService: OffersService, private authService: AuthService, private toastrService: ToastrService) { }
 
   ngOnInit(): void {
+    this.offersService.getOffersByCompany(this.authService.userValue.id).subscribe(offers => {
+      this.offers = offers.map(offer => ({...offer, applications: Math.floor(Math.random() * 10), status: Math.random() > 5 ? 'open' : 'closed' }));
+    },
+    _ => {
+      this.toastrService.showErrorToast('Loading Failed!', 'Could Not Load Offers.');
+    });
   }
 
+  deleteOffer(id: number): void {
+    this.offersService.deleteOffer(id).subscribe(_ => {
+      this.offers = this.offers.filter(offers => offers.id !== id);
+      this.toastrService.showSuccessToast('Deletion Successful!', 'Offer Was Successfully Deleted.');
+    },
+    _ => {
+      this.toastrService.showSuccessToast('Deletion Failed!', 'Error Occurred While Deleting Offer.');
+    });
+  }
 }

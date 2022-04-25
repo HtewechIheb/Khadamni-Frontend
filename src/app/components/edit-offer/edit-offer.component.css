@@ -1,0 +1,179 @@
+.form-container {
+  background-color: #FFFFFF;
+  border: 1px solid rgb(0 0 0 / 14%);
+  padding: 1rem;
+}
+
+.form {
+  padding-top: 2rem;
+}
+
+.header {
+  text-align: center;
+  font-weight: 500;
+}
+
+.header .step-title {
+  font-weight: 300;
+}
+
+.form-field {
+  margin-bottom: 1.25rem;
+}
+
+.form-field .radio-label {
+  color: #6c757d;
+}
+
+.form-field p-radioButton {
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 992px) {
+  .form-field p-radioButton {
+    margin-top: 0.3rem;
+    width: 100%;
+  }
+}
+
+.form-field p-radioButton ::ng-deep label {
+  margin-left: 0.2rem;
+  color: #6c757d;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field p-inputnumber,
+.form-field p-inputnumber ::ng-deep .p-inputnumber,
+.form-field p-dropdown ::ng-deep .p-dropdown {
+  width: 100%;
+}
+
+.form-field input,
+.form-field textarea,
+.form-field p-inputnumber ::ng-deep .p-inputtext,
+.form-field p-dropdown ::ng-deep .p-dropdown {
+  border-radius: 0;
+  box-shadow: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.form-field textarea {
+  resize: none;
+}
+
+.form-field input:not(.ng-dirty.ng-invalid),
+.form-field textarea:not(.ng-dirty.ng-invalid),
+.form-field p-inputnumber:not(.ng-dirty.ng-invalid) ::ng-deep .p-inputtext,
+.form-field p-dropdown:not(.ng-dirty.ng-invalid) ::ng-deep .p-dropdown {
+  border-bottom: 1px solid #757575;
+}
+
+.form-field input:enabled:not(.ng-dirty.ng-invalid):focus,
+.form-field textarea:enabled:not(.ng-dirty.ng-invalid):focus,
+.form-field p-inputnumber:not(.ng-dirty.ng-invalid) ::ng-deep .p-inputtext:enabled:focus,
+.form-field p-dropdown:not(.ng-dirty.ng-invalid) ::ng-deep .p-dropdown:enabled:focus {
+  border-bottom: 1px solid #757575;
+}
+
+.form-field input:enabled:not(.ng-dirty.ng-invalid):hover,
+.form-field textarea:enabled:not(.ng-dirty.ng-invalid):hover,
+.form-field p-inputnumber:not(.ng-dirty.ng-invalid) ::ng-deep .p-inputtext:enabled:hover,
+.form-field p-dropdown:not(.ng-dirty.ng-invalid) ::ng-deep .p-dropdown:enabled:hover {
+  border-bottom: 1px solid #757575;
+}
+
+.errors {
+  color: #e24c4c;
+}
+
+.errors>div {
+  margin-top: 0.75rem;
+}
+
+@media screen and (max-width: 992px) {
+
+  label,
+  .form-field .radio-label,
+  .form-field p-radiobutton ::ng-deep label {
+    font-size: small;
+  }
+}
+
+.form-field .static-float-label {
+  display: block;
+  position: relative;
+}
+
+.form-field .static-float-label>label {
+  top: -.75rem;
+  font-size: 12px;
+  position: absolute;
+  pointer-events: none;
+  margin-top: -.5rem;
+  line-height: 1;
+  left: 0.5rem;
+  color: #6c757d;
+}
+
+.form-field div.skills-selector {
+  margin-top: 2rem;
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+}
+
+.form-field div.skills-selector .skill-adder,
+.form-field div.skills-selector .skill-badge {
+  margin: 0.2rem;
+}
+
+.form-field div.skills-selector .skill-badge input {
+  border-radius: 20px;
+  background-color: #2196F3;
+  color: #FFFFFF;
+  border: none;
+  padding-left: 0.5rem;
+  font-size: small;
+  text-overflow: ellipsis;
+}
+
+.form-field div.skills-selector .skill-adder input {
+  border-radius: 20px;
+  background-color: #FFFFFF;
+  color: #2196F3;
+  border: 1px solid #2196F3;
+  padding-left: 0.5rem;
+  font-size: small;
+}
+
+.form-field div.skills-selector .skill-adder input::placeholder {
+  color: #2196F3;
+  font-size: small;
+}
+
+.form-field div.skills-selector .skill-badge i {
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.form-field div.skills-selector .skill-adder i {
+  color: #2196F3;
+  cursor: pointer;
+}
+
+p-button ::ng-deep button {
+  margin-top: 2rem;
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+
+  .form-field div.skills-selector .skill-adder,
+  .form-field div.skills-selector .skill-badge {
+    width: 100%;
+  }
+}
