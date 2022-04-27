@@ -48,6 +48,6 @@ p-table ::ng-deep .p-datatable-tbody .buttons {
   }
 }
 
-p-table ::ng-deep .p-datatable-tbody .buttons p-button:first-child ::ng-deep button {
+p-table ::ng-deep .p-datatable-tbody .buttons p-button:not(:last-child) ::ng-deep button {
   margin-right: 0.5rem;
 }

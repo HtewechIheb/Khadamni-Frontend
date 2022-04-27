@@ -29,19 +29,19 @@
           <td><span class="p-column-title">Status</span><span [class]="'offer-badge status-' + offer.status.toLowerCase()">{{ offer.status }}</span></td>
           <td class="buttons">
             <span>
-              <p-button label="Login" styleClass="p-button-rounded p-button-primary p-button-text">
+              <p-button styleClass="p-button-outlined p-button-primary p-button-sm" [routerLink]="['/offers', offer.id]">
                 <ng-template pTemplate="content">
-                  <fa-icon [icon]="faMagnifyingGlassPlus"></fa-icon>
+                  <fa-icon [icon]="faMagnifyingGlassPlus" class="icon-left"></fa-icon>Details
                 </ng-template>
               </p-button>
-              <p-button label="Login" styleClass="p-button-rounded p-button-warning p-button-text" [routerLink]="['/offers', offer.id, 'edit']">
+              <p-button styleClass="p-button-outlined p-button-primary p-button-sm" [routerLink]="['/offers', offer.id, 'edit']">
                 <ng-template pTemplate="content">
-                  <fa-icon [icon]="faPen"></fa-icon>
+                  <fa-icon [icon]="faPen" class="icon-left"></fa-icon>Edit
                 </ng-template>
               </p-button>
-              <p-button label="Login" styleClass="p-button-rounded p-button-danger p-button-text" (click)="deleteOfferPopup(offer.id)">
+              <p-button styleClass="p-button-outlined p-button-primary p-button-sm" (click)="deleteOfferPopup(offer.id)">
                 <ng-template pTemplate="content">
-                  <fa-icon [icon]="faTrash"></fa-icon>
+                  <fa-icon [icon]="faTrash" class="icon-left"></fa-icon>Delete
                 </ng-template>
               </p-button>
             </span>
