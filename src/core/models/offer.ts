@@ -10,5 +10,6 @@ export interface Offer {
   spots: number,
   salary: number,
   degree: string,
-  skills: string[]
+  skills: string[],
+  companyId: number
 }

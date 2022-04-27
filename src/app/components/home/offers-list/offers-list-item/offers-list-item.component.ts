@@ -11,6 +11,7 @@ export class OfferItemComponent implements OnInit {
   @Input() company: string;
   @Input() description: string;
   @Input() descriptionLength: number;
+  @Input() logo: string;
   faClock = faClock;
   faBuilding = faBuilding;
   faMapMarkedAlt = faMapMarkedAlt;

@@ -1,5 +1,5 @@
 <h1 class="header">Register Candidate</h1>
-<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()" enctype="multipart/form-data" autocomplete="off">
   <div class="grid">
     <div class="form-field col-12 md:col-6">
       <span class="p-float-label">
@@ -94,7 +94,7 @@
     <div class="col-12">
       <p-button styleClass="p-button-warning" class="upload-button" (onClick)="uploadPhoto()">
         <ng-template pTemplate="content">
-          <span class="w-full font-bold">
+          <span class="w-full">
             <fa-icon [icon]="faIdCardAlt" class="icon-left"></fa-icon>Upload Photo
           </span>
         </ng-template>
@@ -103,7 +103,7 @@
 
       <p-button styleClass="p-button-warning" class="upload-button" (onClick)="uploadResume()">
         <ng-template pTemplate="content">
-          <span class="w-full font-bold">
+          <span class="w-full">
             <fa-icon [icon]="faFileInvoice" class="icon-left"></fa-icon>Upload Resume
           </span>
         </ng-template>
@@ -123,7 +123,7 @@
       </div>
     </div>
     <div class="col-12">
-      <p-button type="submit" label="Register" styleClass="p-button-primary"></p-button>
+      <p-button type="submit" label="Register" styleClass="p-button-primary" [loading]="loading"></p-button>
     </div>
   </div>
 </form>

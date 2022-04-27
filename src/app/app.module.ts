@@ -31,6 +31,7 @@ import { AccessDeniedComponent } from './components/access-denied/access-denied.
 import { ConfirmationService, MessageService } from 'primeng/api';
 import { ToastrService } from './services/toastr.service';
 import { EditOfferComponent } from './components/edit-offer/edit-offer.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +55,7 @@ import { EditOfferComponent } from './components/edit-offer/edit-offer.component
     CompanyDashboardComponent,
     AccessDeniedComponent,
     EditOfferComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +70,7 @@ import { EditOfferComponent } from './components/edit-offer/edit-offer.component
       config: {
         tokenGetter: () => localStorage.getItem('token'),
         allowedDomains: ['localhost:8080'],
-        disallowedRoutes: ['http://localhost:8080/api/auth/login', 'http://localhost:8080/api/auth/register']
+        disallowedRoutes: ['http://localhost:8080/api/auth/login', 'http://localhost:8080/api/auth/register', 'http://localhost:8080/api/auth/refreshtoken']
       }
     })
   ],

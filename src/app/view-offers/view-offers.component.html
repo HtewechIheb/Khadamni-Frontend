@@ -1,17 +1,17 @@
 <div class="grid">
   <div class="col-12 lg:col-10 lg:col-offset-1">
-    <div class="container search-input">
+    <div class="container search-input shadow-3">
       <div class="p-inputgroup">
         <input type="text" pInputText placeholder="Job Title, Keyword, Company...">
-        <button pButton type="button" label=" " class="p-button p-button-primary">
-          <fa-icon [icon]="faSearch" class="button-icon"></fa-icon>
+        <button pButton type="button" label=" " class="p-button-secondary">
+          <fa-icon [icon]="faSearch" class="icon-left"></fa-icon>
           <span class="w-full">Search</span>
         </button>
       </div>
     </div>
   </div>
   <div class="col-12 md:col-3 lg:col-offset-1">
-    <div class="container filters">
+    <div class="container filters shadow-3">
       <div class="header">Filters</div>
       <p-accordion [multiple]="true">
         <p-accordionTab [header]="'Industry'" [selected]="true">

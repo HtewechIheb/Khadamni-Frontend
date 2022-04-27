@@ -1,78 +1,42 @@
 <div class="grid">
-  <div class="col-12 md:col-9">
-    <app-offer-details [preview]="false"></app-offer-details>
-  </div>
-  <div class="col-12 md:col-3">
-    <div class="container">
-      <div class="header">Stats</div>
-      <div class="stat">
-        <span class="content">Pre-selected: <span class="green">15</span></span>
-        <div class="icon green-icon">
-          <fa-icon [icon]="faCheckCircle"></fa-icon>
-        </div>
+  <div class="col-10 col-offset-1">
+    <div class="grid">
+      <div class="col-12 md:col-9">
+        <app-offer-details [offer]="offer" [company]="company" [companyLogoURL]="companyLogoURL"></app-offer-details>
       </div>
-      <div class="stat">
-        <span class="content">Rejected: <span class="red">15</span></span>
-        <div class="icon red-icon">
-          <fa-icon [icon]="faTimesCircle"></fa-icon>
-        </div>
-      </div>
-      <div class="stat">
-        <span class="content">Pending: <span class="cyan">15</span></span>
-        <div class="icon cyan-icon">
-          <fa-icon [icon]="faClock"></fa-icon>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="header">Similar Offers</div>
-      <div class="list">
-        <div class="list-item">
-          <div class="title">
-            C# Developer
+      <div class="col-12 md:col-3">
+        <div class="stats container shadow-3">
+          <h3 class="header">Stats</h3>
+          <div class="stat">
+            <span class="content">Pre-selected: <span class="green">15</span></span>
+            <div class="icon green-icon">
+              <fa-icon [icon]="faCheckCircle"></fa-icon>
+            </div>
           </div>
-          <div class="subtitle">
-            VERMEG Banking Services
+          <div class="stat">
+            <span class="content">Rejected: <span class="red">15</span></span>
+            <div class="icon red-icon">
+              <fa-icon [icon]="faTimesCircle"></fa-icon>
+            </div>
+          </div>
+          <div class="stat">
+            <span class="content">Pending: <span class="cyan">15</span></span>
+            <div class="icon cyan-icon">
+              <fa-icon [icon]="faClock"></fa-icon>
+            </div>
           </div>
         </div>
-        <div class="list-item">
-          <div class="title">
-            Angular Developer
-          </div>
-          <div class="subtitle">
-            ACTIA Engineering Services
-          </div>
-        </div>
-        <div class="list-item">
-          <div class="title">
-            ReactJs Developer
-          </div>
-          <div class="subtitle">
-            Sofia Technologies
-          </div>
-        </div>
-        <div class="list-item">
-          <div class="title">
-            C# Developer
-          </div>
-          <div class="subtitle">
-            VERMEG Banking Services
-          </div>
-        </div>
-        <div class="list-item">
-          <div class="title">
-            Angular Developer
-          </div>
-          <div class="subtitle">
-            ACTIA Engineering Services
-          </div>
-        </div>
-        <div class="list-item">
-          <div class="title">
-            ReactJs Developer
-          </div>
-          <div class="subtitle">
-            Sofia Technologies
+        <div class="similar-offers container shadow-3">
+          <h3 class="header">Similar Offers</h3>
+          <div class="list">
+            <div *ngFor="let offer of similarOffers" class="list-item">
+              <div class="title">
+                {{ offer.title }}
+              </div>
+              <div class="subtitle">
+                {{ offer.company }}
+              </div>
+            </div>
           </div>
         </div>
       </div>

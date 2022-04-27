@@ -1,14 +1,14 @@
 <nav class="navbar">
   <div class="container">
     <div class="brand">
-      <a href="#">Khadamni</a>
+      <a [routerLink]="['/']"><fa-icon [icon]="faBriefcase" class="icon-left"></fa-icon>Khadamni</a>
     </div>
     <ul class="links">
       <li>
-        <a href="#"><fa-icon [icon]="faBell"></fa-icon></a>
+        <a [routerLink]="['/']"><fa-icon [icon]="faBell"></fa-icon></a>
       </li>
       <li>
-        <a href="#"><fa-icon [icon]="faEnvelope"></fa-icon></a>
+        <a [routerLink]="['/']"><fa-icon [icon]="faEnvelope"></fa-icon></a>
       </li>
       <li *ngIf="!!user">
         <a (click)="menu.toggle($event)">

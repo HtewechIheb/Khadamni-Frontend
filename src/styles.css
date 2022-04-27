@@ -8,6 +8,7 @@ body {
   margin: 0;
   background-color: #FDFDFD;
   color: #495057;
+  overflow-x: hidden;
 }
 
 a {
@@ -74,6 +75,10 @@ form:not(.ng-submitted) .p-inputtext.ng-dirty.ng-invalid {
 .p-toast .p-toast-message.p-toast-message-success .p-toast-icon-close,
 .p-toast .p-toast-message.p-toast-message-error .p-toast-icon-close {
   color: #495057;
+}
+
+.p-button-label {
+  font-weight: normal;
 }
 
 .checkbox-group {
