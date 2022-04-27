@@ -46,8 +46,7 @@ export class AddOfferComponent implements OnInit {
 
   public gender = "male";
   public selectedDegree: string;
-  public skills: string[] = ['Web Development', 'UI/UX'];
-  public skillsCount = 2;
+  public skills: string[] = [];
   public readonly maxSkillsCount = 5;
 
   public form: FormGroup;
@@ -80,14 +79,12 @@ export class AddOfferComponent implements OnInit {
 
     if (inputValue.length > 0) {
       this.skills.push(inputValue);
-      this.skillsCount++;
       input.value = null;
     }
   }
 
   public removeSkill(index: number): void {
     this.skills.splice(index, 1);
-    this.skillsCount--;
   }
 
   onSubmit(): void {

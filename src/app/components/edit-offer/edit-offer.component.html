@@ -2,7 +2,7 @@
   <div class="col-10 col-offset-1 md:col-8 md:col-offset-2 xl:col-6 xl:col-offset-3">
     <div class="form-container shadow-3">
       <h1 class="header">Edit Offer</h1>
-      <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+      <form class="form" [formGroup]="form" (ngSubmit)="onSubmit()" autocomplete="off">
         <div class="grid">
           <div class="form-field col-12">
             <span class="p-float-label">
@@ -60,13 +60,13 @@
                   <i (click)="removeSkill(i)" class="pi pi-times-circle"></i>
                   <input type="text" pInputText [value]="skill" readonly />
                 </span>
-                <span *ngIf="skillsCount < maxSkillsCount" class="p-input-icon-right skill-adder">
+                <span *ngIf="skills.length < maxSkillsCount" class="p-input-icon-right skill-adder">
                   <i (click)="addSkill(skillInput)" class="pi pi-plus-circle"></i>
                   <input type="text" pInputText placeholder="Add Skill" name="new-skill" #skillInput />
                 </span>
               </div>
               <label>
-                <fa-icon [icon]="faFistRaised" class="icon-left"></fa-icon>Skills ({{ maxSkillsCount - skillsCount }}
+                <fa-icon [icon]="faFistRaised" class="icon-left"></fa-icon>Skills ({{ maxSkillsCount - skills.length }}
                 remaining)
               </label>
             </span>
@@ -103,7 +103,7 @@
             </span>
           </div>
           <div class="col-12">
-            <p-button type="submit" label="Submit" styleClass="p-button-primary"></p-button>
+            <p-button type="submit" label="Submit" styleClass="p-button-primary" [loading]="loading"></p-button>
           </div>
         </div>
       </form>
