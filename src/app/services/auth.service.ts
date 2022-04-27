@@ -93,7 +93,7 @@ export class AuthService {
       formData.append('address', data.address);
     }
     if(data.birthdate){
-      formData.append('birthdate', data.birthdate.toUTCString());
+      formData.append('birthdate', this.formatDate(data.birthdate));
     }
     if(data.resumeFile){
       formData.append('resumeFile', data.resumeFile, data.resumeFile.name);
@@ -122,8 +122,8 @@ export class AuthService {
     this.currentUserSubject.next(null);
   }
 
-  refreshToken(expiredToken: string): Observable<any> {
-    return this.http.post<AuthResponse>(`${environment.apiUrl}/auth/refreshtoken`, { token: expiredToken }, { withCredentials: true }).pipe(
+  refreshToken(): Observable<any> {
+    return this.http.post<AuthResponse>(`${environment.apiUrl}/auth/refreshtoken`, {}, { withCredentials: true }).pipe(
       tap(response => {
         this.handleAuthResponse(response);
       })
@@ -134,7 +134,7 @@ export class AuthService {
     const token = this.getToken();
     if(token){
       if(this.jwtHelperService.isTokenExpired(token)){
-        this.refreshToken(token);
+        this.refreshToken().subscribe();
       }
       else {
         this.currentUserSubject.next(this.getUserFromDecodedToken(this.jwtHelperService.decodeToken(token)));
@@ -163,5 +163,9 @@ export class AuthService {
 
   setToken(token: string): void {
     localStorage.setItem('token', token);
+  }
+
+  private formatDate(date: Date): string {
+    return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
   }
 }

@@ -18,7 +18,7 @@ export class UnauthorizedInterceptor implements HttpInterceptor {
     return next.handle(req).pipe(
       catchError(error => {
         if(error.status === HttpStatusCode.Unauthorized){
-          return this.authService.refreshToken(this.authService.getToken()).pipe(
+          return this.authService.refreshToken().pipe(
             switchMap(response => {
               return next.handle(this.setAuthorizationHeader(req, response.token));
             }),
