@@ -1,105 +1,76 @@
-<div class="container offer-info">
+<div class="container offer-info shadow-3">
   <div class="grid">
     <div class="col-12 md:col-3">
-      <img src="../../../assets/images/company.png" alt="company-logo" class="company-logo" />
+      <img [src]="companyLogoURL" alt="company-logo" class="company-logo" />
     </div>
     <div class="col-12 md:col-9 content">
       <div class="text">
-        <div class="title">Angular/JEE Senior Developer</div>
+        <h3 class="title">{{ offer?.title }}</h3>
         <div class="subtitle">
-          <fa-icon [icon]="faBuilding"></fa-icon> ACTIA Engineering
+          <fa-icon [icon]="faBuilding"></fa-icon> {{ company?.name }}
         </div>
         <div class="subtitle">
-          <fa-icon [icon]="faMapMarkedAlt"></fa-icon> Ariana, Tunisie
+          <fa-icon [icon]="faMapMarkedAlt"></fa-icon> {{ company?.address }}
         </div>
         <div class="subtitle">
-          <fa-icon [icon]="faClock"></fa-icon> 12/10/2021
+          <fa-icon [icon]="faClock"></fa-icon> 25/04/2022
         </div>
       </div>
-      <div class="buttons" *ngIf="!preview">
-        <button pButton type="button" label=" " class="p-button p-button-primary">
-          <span class="w-full">Apply</span>
-        </button>
-      </div>
+      <p-button label="Apply" styleClass="p-button-primary p-button-sm"></p-button>
     </div>
   </div>
 </div>
 
-<div class="container  offer-requirements">
+<div class="container  offer-requirements shadow-3">
   <div class="grid">
     <div class="col-12 md:col-4">
-      <div class="title">Required Degree</div>
+      <h4 class="title">Required Degree</h4>
       <div class="content">
-        - Masters
-        <br>
-        - DEA
-        <br>
+        - {{ offer?.degree ? offer.degree : 'None' }}
       </div>
     </div>
     <div class="col-12 md:col-4">
-      <div class="title">Employment Type</div>
+      <h4 class="title">Employment Type</h4>
       <div class="content">
-        - CDI
-        <br>
-        - CDD
-        <br>
-        - Karama
-        <br>
+        - {{ offer?.type ? offer.type : 'Not Specified' }}
       </div>
     </div>
     <div class="col-12 md:col-4">
-      <div class="title">Gender</div>
+      <h4 class="title">Gender</h4>
       <div class="content">
-        - Male
-        <br>
-        - Female
-        <br>
+        - {{ offer?.gender ? offer.gender : 'Both' }}
       </div>
     </div>
     <div class="col-12 md:col-4">
-      <div class="title">Experience</div>
+      <h4 class="title">Experience</h4>
       <div class="content">
-        - 1 to 3 years
+        - {{ offer?.minimumExperience }} {{ offer?.recommendedExperience ? 'to ' + offer.recommendedExperience + ' years' : '' }}
       </div>
     </div>
     <div class="col-12 md:col-4">
-      <div class="title">Skills</div>
+      <h4 class="title">Skills</h4>
       <div class="content">
-        - HTML
-        <br>
-        - JavaScript
-        <br>
-        - PHP
-        <br>
+        <span class="skill" *ngFor="let skill of offer?.skills">
+          - {{ skill }}
+        </span>
       </div>
     </div>
     <div class="col-12 md:col-4">
-      <div class="title">Open Spots</div>
+      <h4 class="title">Open Spots</h4>
       <div class="content">
-        - 3 Spots
+        - {{ offer?.spots ? offer.spots : 'Not Specified' }} Spots
       </div>
     </div>
   </div>
 </div>
-<div class="container offer-description">
+<div class="container offer-description shadow-3">
   <div class="grid">
     <div class="col-12">
       <div class="title">
         Job Description
       </div>
       <div class="content">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, ad asperiores. Illo maiores labore, aperiam
-        excepturi
-        quasi corporis! Possimus dolorum praesentium vitae quia recusandae iure quasi sed porro aspernatur, ex, quibusdam a
-        numquam dolor. Animi quam eveniet odio? Placeat cumque minus laudantium architecto repellendus tempore delectus ex
-        optio
-        omnis vitae.
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, ad asperiores. Illo maiores labore, aperiam
-        excepturi
-        quasi corporis! Possimus dolorum praesentium vitae quia recusandae iure quasi sed porro aspernatur, ex, quibusdam a
-        numquam dolor. Animi quam eveniet odio? Placeat cumque minus laudantium architecto repellendus tempore delectus ex
-        optio
-        omnis vitae.
+        {{ offer?.description }}
       </div>
     </div>
   </div>

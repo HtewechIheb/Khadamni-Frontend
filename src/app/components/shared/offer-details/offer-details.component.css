@@ -1,23 +1,21 @@
 .container {
   background-color: #FFFFFF;
   border: 1px solid rgb(0 0 0 / 14%);
-  box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
-  margin: 1rem 0rem 1rem 0rem;
 }
 
-.container:first-child {
-  margin-top: 0;
-}
-
-.container:last-child {
-  margin-bottom: 0;
-}
-
-.container > .grid {
+.container>.grid {
   margin: 0;
 }
 
-@media screen and (max-width: 768px){
+.offer-info {
+  margin-bottom: 1rem;
+}
+
+.offer-description {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 768px) {
   .offer-info {
     text-align: center;
   }
@@ -27,7 +25,7 @@
   width: 100%;
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .company-logo {
     max-height: 200px;
     width: auto;
@@ -36,7 +34,7 @@
 
 .title {
   font-weight: 500;
-  font-size: large;
+  margin-top: 0;
   margin-bottom: 0.5rem;
 }
 
@@ -47,7 +45,7 @@
   margin-bottom: 0.5rem;
 }
 
-.offer-info .subtitle > fa-icon {
+.offer-info .subtitle>fa-icon {
   color: #4AA3E8;
 }
 
@@ -61,31 +59,26 @@
   justify-content: space-between;
 }
 
-.offer-info .buttons {
-  display: flex;
-  justify-content: flex-end;
-  padding-top: 1rem
+.offer-info p-button {
+  align-self: flex-end;
 }
 
-.offer-info .buttons > button {
-  width: 30%;
+.offer-info p-button ::ng-deep button {
+  width: 150px;
 }
 
-@media screen and (min-width: 567px) and (max-width: 768px) {
-  .offer-info .buttons {
-    justify-content: center;
+@media screen and (max-width: 768px) {
+  .offer-info p-button {
+    width: 100%;
+    padding-top: 1rem;
+    align-self: center;
   }
 }
 
 @media screen and (max-width: 567px) {
-  .offer-info .buttons > button {
+  .offer-info p-button ::ng-deep button {
     width: 100%;
   }
-}
-
-.offer-requirements .title {
-  margin-bottom: 0.5rem;
-  font-size: medium;
 }
 
 .offer-requirements .content {
@@ -93,36 +86,36 @@
   font-size: small;
 }
 
-@media screen and (min-width: 768px){
-  .offer-requirements > .grid > div:first-child {
+@media screen and (min-width: 768px) {
+  .offer-requirements>.grid>div:first-child {
     border-right: 1px solid rgb(0 0 0 / 14%);
   }
 
-  .offer-requirements > .grid > div:nth-child(2) {
+  .offer-requirements>.grid>div:nth-child(2) {
     border-right: 1px solid rgb(0 0 0 / 14%);
   }
 
-  .offer-requirements > .grid > div:nth-child(4) {
+  .offer-requirements>.grid>div:nth-child(4) {
     border-top: 1px solid rgb(0 0 0 / 14%);
     border-right: 1px solid rgb(0 0 0 / 14%);
   }
 
-  .offer-requirements > .grid > div:nth-child(5) {
+  .offer-requirements>.grid>div:nth-child(5) {
     border-top: 1px solid rgb(0 0 0 / 14%);
     border-right: 1px solid rgb(0 0 0 / 14%);
   }
 
-  .offer-requirements > .grid > div:last-child {
+  .offer-requirements>.grid>div:last-child {
     border-top: 1px solid rgb(0 0 0 / 14%);
   }
 }
 
-@media screen and (max-width: 768px){
-  .offer-requirements > .grid > div {
+@media screen and (max-width: 768px) {
+  .offer-requirements>.grid>div {
     border-bottom: 1px solid rgb(0 0 0 / 14%);
   }
 
-  .offer-requirements > .grid > div:last-child {
+  .offer-requirements>.grid>div:last-child {
     border-bottom: none;
   }
 }
