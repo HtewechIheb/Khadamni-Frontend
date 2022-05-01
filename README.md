@@ -1,4 +1,5 @@
-# ProjectXFront
+# Khadamni Frontend
+The project is the frontend of an employment and job listings platform written in Angular & ASP.Net Core.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.4.
 
